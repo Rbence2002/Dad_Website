@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RudiBudi Checkers | Luxury Hospitality Auditing</title>
+    <title>Noble Audits | British Hospitality Standards</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,15 +23,21 @@
                     },
                     colors: {
                         stone: {
-                            50: '#fafaf9',
-                            100: '#f5f5f4',
-                            200: '#e7e5e4',
-                            800: '#292524',
-                            900: '#1c1917',
+                            50: '#f9fafb', // Very light grey
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
                         },
+                        // Custom "Royal Navy" for British Identity
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a', 
+                            950: '#020617', 
+                        },
+                        // Custom Gold for Premium feel
                         gold: {
-                            500: '#bfa15f',
-                            600: '#a38748',
+                            400: '#d4af37',
+                            500: '#c5a059',
+                            600: '#b08d55',
                         }
                     }
                 }
@@ -41,25 +47,31 @@
     <style>
         /* Elegant selection color */
         ::selection {
-            background-color: #292524;
-            color: #bfa15f;
+            background-color: #0f172a;
+            color: #c5a059;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+<body class="bg-stone-50 text-navy-900 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="flex flex-col">
-                <span class="font-serif text-2xl font-bold text-stone-900 tracking-tight">RudiBudi Checkers</span>
-                <span class="text-[10px] uppercase tracking-[0.2em] text-gold-600 font-bold">Est. 1995</span>
+            <a href="#" class="flex flex-col group">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="crown" class="w-6 h-6 text-gold-500 mb-1"></i>
+                    <span class="font-serif text-2xl font-bold text-navy-950 tracking-tight group-hover:text-gold-600 transition-colors">Noble Audits</span>
+                </div>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-navy-800 font-bold pl-8">London &bull; Budapest</span>
             </a>
             
             <div class="flex items-center gap-8">
-                <a href="#about" class="hidden md:block text-sm font-bold uppercase tracking-widest hover:text-gold-600 transition-colors" data-i18n="navAbout">About</a>
-                <a href="#services" class="hidden md:block text-sm font-bold uppercase tracking-widest hover:text-gold-600 transition-colors" data-i18n="navServices">Services</a>
+                <a href="#about" class="hidden md:block text-xs font-bold uppercase tracking-widest text-navy-800 hover:text-gold-600 transition-colors" data-i18n="navAbout">Heritage</a>
+                <a href="#services" class="hidden md:block text-xs font-bold uppercase tracking-widest text-navy-800 hover:text-gold-600 transition-colors" data-i18n="navServices">Services</a>
                 
-                <button id="lang-toggle" class="flex items-center gap-2 px-4 py-2 border border-stone-300 rounded-sm hover:border-stone-800 transition-all text-xs font-bold uppercase tracking-widest">
+                <button id="lang-toggle" class="flex items-center gap-2 px-3 py-1.5 border border-stone-300 rounded-sm hover:border-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold uppercase tracking-widest">
                     <span id="current-lang-text">EN</span>
                 </button>
             </div>
@@ -68,26 +80,28 @@
 
     <main class="pt-24">
         
-        <section class="relative py-20 md:py-32 px-6 border-b border-stone-200">
+        <section class="relative py-20 md:py-32 px-6 border-b border-stone-200 bg-stone-50">
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <span class="block text-gold-600 font-bold tracking-[0.2em] uppercase text-sm mb-6" data-i18n="heroSubtitle">Global Quality Assurance</span>
-                    <h1 class="font-serif text-5xl md:text-7xl text-stone-900 leading-[1.1] mb-8" data-i18n="heroTitle">
-                        The Standard for <br> <i class="font-serif text-stone-600">Luxury Hospitality.</i>
+                <div class="order-2 lg:order-1">
+                    <div class="inline-block border-b-2 border-gold-500 pb-1 mb-6">
+                        <span class="text-navy-900 font-bold tracking-[0.2em] uppercase text-xs" data-i18n="heroSubtitle">British Precision. Global Reach.</span>
+                    </div>
+                    <h1 class="font-serif text-5xl md:text-7xl text-navy-950 leading-[1.1] mb-8" data-i18n="heroTitle">
+                        Uncompromising <br> <i class="font-serif text-gold-600">Audit Excellence.</i>
                     </h1>
-                    <p class="text-lg text-stone-600 leading-relaxed max-w-lg mb-10" data-i18n="heroDesc">
-                        We don't just measure standards; we measure emotion. RudiBudi Checkers provides the data that turns guests into lifelong advocates.
+                    <p class="text-lg text-navy-800/80 leading-relaxed max-w-lg mb-10 font-light" data-i18n="heroDesc">
+                        Noble Audits delivers the unvarnished truth about your guest experience. Led by Brendon Rudolph, we bring classic British scrutiny to modern hospitality.
                     </p>
-                    <a href="#contact" class="inline-block bg-stone-900 text-stone-50 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gold-600 transition-colors" data-i18n="ctaButton">
-                        Schedule Consultation
+                    <a href="#contact" class="inline-block bg-navy-900 text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-gold-600 transition-colors shadow-lg" data-i18n="ctaButton">
+                        Request Proposal
                     </a>
                 </div>
                 
-                <div class="relative h-[500px] w-full bg-stone-200 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" alt="Luxury Hotel Lobby Detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
-                    <div class="absolute bottom-0 left-0 bg-stone-900 text-white p-6 w-full md:w-auto">
-                        <p class="font-serif text-2xl italic">"Excellence is in the details."</p>
-                        <p class="text-xs uppercase tracking-widest mt-2 text-gold-500">- Brendon Rudolph</p>
+                <div class="order-1 lg:order-2 relative h-[500px] w-full overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2070&auto=format&fit=crop" alt="Luxury Hotel Lobby Detail" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]">
+                    <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur p-6 max-w-xs shadow-sm border-l-4 border-gold-500">
+                        <p class="font-serif text-xl italic text-navy-900">"True luxury is the absence of friction."</p>
+                        <p class="text-[10px] uppercase tracking-widest mt-2 text-gold-600 font-bold">- Brendon Rudolph, Founder</p>
                     </div>
                 </div>
             </div>
@@ -95,116 +109,175 @@
 
         <section id="about" class="py-24 bg-white border-b border-stone-200">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <i data-lucide="clock" class="w-8 h-8 text-gold-600 mx-auto mb-6"></i>
-                <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-8" data-i18n="aboutTitle">Decades of Unrivaled Insight</h2>
-                <div class="prose prose-lg mx-auto text-stone-600">
-                    <p class="mb-6 leading-relaxed" data-i18n="aboutText1">
-                        Founded by Brendon Rudolph, RudiBudi Checkers has spent over 25 years strictly focused on the hospitality and travel industries. Unlike generalist research firms, we speak the language of luxury. We understand that in a 5-star environment, it is not enough to simply serve coffee; it is about the grace, timing, and emotional connection of the service.
+                <div class="flex justify-center mb-6">
+                    <div class="w-px h-16 bg-gold-500"></div>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl text-navy-950 mb-8" data-i18n="aboutTitle">A Legacy of British Standards</h2>
+                <div class="prose prose-lg mx-auto text-navy-800/80">
+                    <p class="mb-6 leading-relaxed font-light" data-i18n="aboutText1">
+                        With roots in the rigorous etiquette of London's grand hotels, founder Brendon Rudolph established Noble Audits to bring a higher caliber of evaluation to the international market. We do not simply check boxes; we uphold the traditions of impeccable service.
                     </p>
-                    <p class="leading-relaxed" data-i18n="aboutText2">
-                        From boutique hideaways in Budapest to sprawling resorts in the Maldives, our evaluators are seasoned travelers who match your guest profile perfectly. We empower leadership teams with the granular data needed to refine operations and elevate the guest experience.
+                    <p class="leading-relaxed font-light" data-i18n="aboutText2">
+                        Based in Budapest but operating with a British mindset, our team possesses the refined eye required to spot the smallest deviations in protocol. Whether serving royalty or rock stars, your staff must perform flawlessly. We ensure they do.
                     </p>
+                </div>
+                <div class="mt-10 flex justify-center gap-4">
+                     <span class="font-serif text-4xl text-gold-500 italic opacity-50">B. Rudolph</span>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="border-b border-stone-200">
-            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-200">
-                <div class="p-12 hover:bg-stone-100 transition-colors group">
-                    <div class="mb-6 text-stone-900 group-hover:text-gold-600 transition-colors">
-                        <i data-lucide="clipboard-check" class="w-8 h-8"></i>
-                    </div>
-                    <h3 class="font-serif text-2xl text-stone-900 mb-4" data-i18n="serv1Title">Brand Compliance</h3>
-                    <p class="text-stone-600 leading-relaxed text-sm" data-i18n="serv1Desc">
-                        We rigorously test adherence to your brand's Standard Operating Procedures (SOPs). Ensure that your brand promise is kept consistent, whether in London, New York, or Budapest.
-                    </p>
+        <section id="services" class="py-24 bg-stone-50 border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-6">
+                
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl text-navy-950 mb-4" data-i18n="servHeading">Core Audit Solutions</h2>
+                    <p class="text-navy-800/60 uppercase tracking-widest text-xs" data-i18n="servSub">Precision tailored to your operational needs</p>
                 </div>
 
-                <div class="p-12 hover:bg-stone-100 transition-colors group">
-                    <div class="mb-6 text-stone-900 group-hover:text-gold-600 transition-colors">
-                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    
+                    <div class="relative bg-white border border-stone-200 p-10 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy-900 to-navy-800 group-hover:from-gold-500 group-hover:to-gold-400 transition-all"></div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-navy-50 p-3 rounded-full text-navy-900 group-hover:bg-gold-50 group-hover:text-gold-600 transition-colors">
+                                <i data-lucide="zap" class="w-8 h-8"></i>
+                            </div>
+                            <span class="bg-navy-900 text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm" data-i18n="rushBadge">Most Popular</span>
+                        </div>
+                        <h3 class="font-serif text-3xl text-navy-950 mb-4" data-i18n="rushTitle">The Two-Hour Rush</h3>
+                        <p class="text-navy-800/70 mb-8 leading-relaxed" data-i18n="rushDesc">
+                            A rapid, high-impact assessment designed for immediate feedback. Our auditor validates critical touchpoints—Arrival, Front Desk efficiency, and Bar Service—within a concentrated window. Perfect for spot-checks during peak hours.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-navy-800">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat1">Immediate verbal report</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat2">Focus on First Impressions</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat3">Cost-effective Snapshot</span></li>
+                        </ul>
                     </div>
-                    <h3 class="font-serif text-2xl text-stone-900 mb-4" data-i18n="serv2Title">Emotional Audits</h3>
-                    <p class="text-stone-600 leading-relaxed text-sm" data-i18n="serv2Desc">
-                        Moving beyond functional checklists, we measure the "warmth" of engagement. Did the staff make eye contact? Did they anticipate needs? We quantify the unquantifiable.
-                    </p>
+
+                    <div class="relative bg-navy-900 text-white border border-navy-800 p-10 shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gold-500"></div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-white/10 p-3 rounded-full text-gold-400">
+                                <i data-lucide="clock" class="w-8 h-8"></i>
+                            </div>
+                            <span class="border border-gold-500 text-gold-400 text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm" data-i18n="fullBadge">The Gold Standard</span>
+                        </div>
+                        <h3 class="font-serif text-3xl text-white mb-4" data-i18n="fullTitle">The Comprehensive Day</h3>
+                        <p class="text-stone-300 mb-8 leading-relaxed" data-i18n="fullDesc">
+                            The definitive deep-dive. An auditor immerses themselves for 24 hours, evaluating over 300 SOP criteria across Housekeeping, F&B, Concierge, and Spa. This is the forensic analysis required for 5-star accreditation.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-stone-200">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat1">Full Guest Journey Mapping</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat2">Overnight Stay & Breakfast</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat3">Detailed Strategic Report</span></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div class="p-12 hover:bg-stone-100 transition-colors group">
-                    <div class="mb-6 text-stone-900 group-hover:text-gold-600 transition-colors">
-                        <i data-lucide="bar-chart-2" class="w-8 h-8"></i>
+                <div class="bg-white border border-stone-200 p-8 md:p-12">
+                    <h4 class="font-serif text-2xl text-navy-950 mb-8 text-center" data-i18n="addonTitle">Bespoke Add-ons & Specifics</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="flex gap-4">
+                            <i data-lucide="wine" class="w-6 h-6 text-gold-600 shrink-0"></i>
+                            <div>
+                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add1Title">Sommelier Test</h5>
+                                <p class="text-sm text-navy-800/70" data-i18n="add1Desc">Testing wine knowledge and upselling skills in your fine dining venues.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i data-lucide="phone-call" class="w-6 h-6 text-gold-600 shrink-0"></i>
+                            <div>
+                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add2Title">The Impossible Request</h5>
+                                <p class="text-sm text-navy-800/70" data-i18n="add2Desc">Challenging your Concierge with difficult demands to test resourcefulness.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i data-lucide="moon" class="w-6 h-6 text-gold-600 shrink-0"></i>
+                            <div>
+                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add3Title">Late Night Arrival</h5>
+                                <p class="text-sm text-navy-800/70" data-i18n="add3Desc">Auditing the energy and standards of the night shift team.</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="font-serif text-2xl text-stone-900 mb-4" data-i18n="serv3Title">Competitive Benchmarking</h3>
-                    <p class="text-stone-600 leading-relaxed text-sm" data-i18n="serv3Desc">
-                        See exactly how you stack up against your competitive set. We deploy evaluators to your rivals to provide a direct comparison of service levels and amenities.
-                    </p>
                 </div>
+
             </div>
         </section>
 
-        <section class="py-24 px-6 bg-stone-100">
+        <section class="py-24 px-6 bg-white">
             <div class="max-w-7xl mx-auto">
-                <div class="mb-16 border-l-4 border-gold-600 pl-6">
-                    <h2 class="font-serif text-4xl text-stone-900 mb-2" data-i18n="portTitle">Selected Partnerships</h2>
-                    <p class="text-stone-500 uppercase tracking-widest text-sm" data-i18n="portSub">Budapest & International</p>
+                <div class="mb-16 border-l-4 border-gold-600 pl-6 flex flex-col md:flex-row justify-between items-end">
+                    <div>
+                        <h2 class="font-serif text-4xl text-navy-950 mb-2" data-i18n="portTitle">Selected Partnerships</h2>
+                        <p class="text-navy-800/60 uppercase tracking-widest text-xs" data-i18n="portSub">Curated Excellence in Budapest</p>
+                    </div>
+                    <div class="hidden md:block">
+                        <a href="#contact" class="text-gold-600 font-bold text-xs uppercase tracking-widest border-b border-gold-600 pb-1 hover:text-navy-900 hover:border-navy-900 transition-colors">View All Clients</a>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                     
-                    <div class="bg-white p-2 shadow-sm hover:shadow-xl transition-shadow duration-500">
-                        <div class="relative h-80 overflow-hidden">
+                    <div class="group cursor-pointer">
+                        <div class="relative h-80 overflow-hidden mb-6 border border-stone-100 shadow-sm">
+                            <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop" 
-                                 alt="Luxury Hotel Exterior representing Kempinski" 
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1">
-                                <span class="text-[10px] font-bold tracking-widest uppercase">Since 2010</span>
+                                 alt="Kempinski Hotel Corvinus Budapest Exterior" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
+                                <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Since 2010</span>
                             </div>
                         </div>
-                        <div class="p-8">
-                            <h3 class="font-serif text-2xl text-stone-900 mb-2">Kempinski Hotel Corvinus</h3>
-                            <p class="text-xs font-bold text-gold-600 uppercase tracking-widest mb-4">Budapest, Hungary</p>
-                            <p class="text-stone-600 text-sm leading-relaxed" data-i18n="hotel1Desc">
-                                Comprehensive operational audits focusing on the "Lady in Red" guest relations program and high-touch concierge services.
-                            </p>
-                        </div>
+                        <h3 class="font-serif text-2xl text-navy-950 mb-2 group-hover:text-gold-600 transition-colors">Kempinski Hotel Corvinus</h3>
+                        <p class="text-[10px] font-bold text-navy-400 uppercase tracking-widest mb-4">Budapest, Hungary</p>
+                        <p class="text-navy-800/70 text-sm leading-relaxed" data-i18n="hotel1Desc">
+                            Comprehensive operational audits focusing on the "Lady in Red" guest relations program and high-touch concierge services.
+                        </p>
                     </div>
 
-                    <div class="bg-white p-2 shadow-sm hover:shadow-xl transition-shadow duration-500">
-                        <div class="relative h-80 overflow-hidden">
+                    <div class="group cursor-pointer">
+                        <div class="relative h-80 overflow-hidden mb-6 border border-stone-100 shadow-sm">
+                            <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" 
                                  alt="Classic Luxury Hotel Facade representing Le Méridien" 
-                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1">
-                                <span class="text-[10px] font-bold tracking-widest uppercase">Historic Audit</span>
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
+                                <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Historic Audit</span>
                             </div>
                         </div>
-                        <div class="p-8">
-                            <h3 class="font-serif text-2xl text-stone-900 mb-2">Le Méridien Budapest</h3>
-                            <p class="text-xs font-bold text-gold-600 uppercase tracking-widest mb-4">Budapest, Hungary</p>
-                            <p class="text-stone-600 text-sm leading-relaxed" data-i18n="hotel2Desc">
-                                Strategic evaluations of the historic Adria Palace property, focusing on food & beverage standards and housekeeping efficiency.
-                            </p>
-                        </div>
+                        <h3 class="font-serif text-2xl text-navy-950 mb-2 group-hover:text-gold-600 transition-colors">Le Méridien Budapest</h3>
+                        <p class="text-[10px] font-bold text-navy-400 uppercase tracking-widest mb-4">Budapest, Hungary</p>
+                        <p class="text-navy-800/70 text-sm leading-relaxed" data-i18n="hotel2Desc">
+                            Strategic evaluations of the historic Adria Palace property, focusing on food & beverage standards and housekeeping efficiency.
+                        </p>
                     </div>
 
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="bg-stone-900 text-stone-300 py-24 px-6 border-t border-gold-600">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="font-serif text-4xl md:text-5xl text-white mb-8" data-i18n="contactTitle">Elevate Your Standards</h2>
-                <p class="text-lg mb-12 max-w-xl mx-auto text-stone-400" data-i18n="contactText">
-                    Contact RudiBudi Checkers for a confidential discussion about your property's mystery shopping needs.
+        <section id="contact" class="bg-navy-950 text-stone-300 py-24 px-6 border-t-4 border-gold-600 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-12 opacity-5">
+                <i data-lucide="anchor" class="w-96 h-96"></i>
+            </div>
+
+            <div class="max-w-4xl mx-auto text-center relative z-10">
+                <span class="text-gold-500 font-bold tracking-[0.2em] uppercase text-xs mb-4 block" data-i18n="contactPre">Discreet & Professional</span>
+                <h2 class="font-serif text-4xl md:text-6xl text-white mb-8" data-i18n="contactTitle">Elevate Your Standards</h2>
+                <p class="text-lg mb-12 max-w-xl mx-auto text-stone-400 font-light" data-i18n="contactText">
+                    Contact Noble Audits for a confidential discussion about your property's specific requirements.
                 </p>
-                <a href="mailto:brendon@rudibudicheckers.com" class="inline-flex items-center gap-3 border border-stone-600 px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-stone-900 hover:border-white transition-all duration-300">
+                <a href="mailto:brendon@nobleaudits.com" class="inline-flex items-center gap-3 border border-stone-700 bg-navy-900 px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-gold-600 hover:text-white hover:border-gold-600 transition-all duration-300">
                     <i data-lucide="mail" class="w-4 h-4"></i>
                     <span data-i18n="contactBtn">Contact Brendon</span>
                 </a>
                 
-                <div class="mt-24 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-stone-600">
-                    <p>&copy; 2024 RudiBudi Checkers.</p>
-                    <p>Budapest &bull; Vienna &bull; International</p>
+                <div class="mt-24 pt-8 border-t border-navy-800 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-widest uppercase text-stone-500">
+                    <p>&copy; 2024 Noble Audits. All rights reserved.</p>
+                    <p>London &bull; Budapest &bull; Vienna</p>
                 </div>
             </div>
         </section>
@@ -215,59 +288,97 @@
         // Translations
         const translations = {
             en: {
-                navAbout: 'About',
+                navAbout: 'Heritage',
                 navServices: 'Services',
-                heroSubtitle: 'Global Quality Assurance',
-                heroTitle: 'The Standard for <br> <i class="font-serif text-stone-600">Luxury Hospitality.</i>',
-                heroDesc: "We don't just measure standards; we measure emotion. RudiBudi Checkers provides the data that turns guests into lifelong advocates.",
-                ctaButton: 'Schedule Consultation',
+                heroSubtitle: 'British Precision. Global Reach.',
+                heroTitle: 'Uncompromising <br> <i class="font-serif text-gold-600">Audit Excellence.</i>',
+                heroDesc: "Noble Audits delivers the unvarnished truth about your guest experience. Led by Brendon Rudolph, we bring classic British scrutiny to modern hospitality.",
+                ctaButton: 'Request Proposal',
                 
-                aboutTitle: 'Decades of Unrivaled Insight',
-                aboutText1: 'Founded by Brendon Rudolph, RudiBudi Checkers has spent over 25 years strictly focused on the hospitality and travel industries. Unlike generalist research firms, we speak the language of luxury. We understand that in a 5-star environment, it is not enough to simply serve coffee; it is about the grace, timing, and emotional connection of the service.',
-                aboutText2: 'From boutique hideaways in Budapest to sprawling resorts in the Maldives, our evaluators are seasoned travelers who match your guest profile perfectly. We empower leadership teams with the granular data needed to refine operations and elevate the guest experience.',
+                aboutTitle: 'A Legacy of British Standards',
+                aboutText1: 'With roots in the rigorous etiquette of London\'s grand hotels, founder Brendon Rudolph established Noble Audits to bring a higher caliber of evaluation to the international market. We do not simply check boxes; we uphold the traditions of impeccable service.',
+                aboutText2: 'Based in Budapest but operating with a British mindset, our team possesses the refined eye required to spot the smallest deviations in protocol. Whether serving royalty or rock stars, your staff must perform flawlessly. We ensure they do.',
 
-                serv1Title: 'Brand Compliance',
-                serv1Desc: "We rigorously test adherence to your brand's Standard Operating Procedures (SOPs). Ensure that your brand promise is kept consistent, whether in London, New York, or Budapest.",
-                serv2Title: 'Emotional Audits',
-                serv2Desc: 'Moving beyond functional checklists, we measure the "warmth" of engagement. Did the staff make eye contact? Did they anticipate needs? We quantify the unquantifiable.',
-                serv3Title: 'Competitive Benchmarking',
-                serv3Desc: 'See exactly how you stack up against your competitive set. We deploy evaluators to your rivals to provide a direct comparison of service levels and amenities.',
+                servHeading: 'Core Audit Solutions',
+                servSub: 'Precision tailored to your operational needs',
+                
+                rushBadge: 'Most Popular',
+                rushTitle: 'The Two-Hour Rush',
+                rushDesc: 'A rapid, high-impact assessment designed for immediate feedback. Our auditor validates critical touchpoints—Arrival, Front Desk efficiency, and Bar Service—within a concentrated window. Perfect for spot-checks during peak hours.',
+                rushFeat1: 'Immediate verbal report',
+                rushFeat2: 'Focus on First Impressions',
+                rushFeat3: 'Cost-effective Snapshot',
+
+                fullBadge: 'The Gold Standard',
+                fullTitle: 'The Comprehensive Day',
+                fullDesc: 'The definitive deep-dive. An auditor immerses themselves for 24 hours, evaluating over 300 SOP criteria across Housekeeping, F&B, Concierge, and Spa. This is the forensic analysis required for 5-star accreditation.',
+                fullFeat1: 'Full Guest Journey Mapping',
+                fullFeat2: 'Overnight Stay & Breakfast',
+                fullFeat3: 'Detailed Strategic Report',
+
+                addonTitle: 'Bespoke Add-ons & Specifics',
+                add1Title: 'Sommelier Test',
+                add1Desc: 'Testing wine knowledge and upselling skills in your fine dining venues.',
+                add2Title: 'The Impossible Request',
+                add2Desc: 'Challenging your Concierge with difficult demands to test resourcefulness.',
+                add3Title: 'Late Night Arrival',
+                add3Desc: 'Auditing the energy and standards of the night shift team.',
 
                 portTitle: 'Selected Partnerships',
-                portSub: 'Budapest & International',
+                portSub: 'Curated Excellence in Budapest',
                 hotel1Desc: 'Comprehensive operational audits focusing on the "Lady in Red" guest relations program and high-touch concierge services.',
                 hotel2Desc: 'Strategic evaluations of the historic Adria Palace property, focusing on food & beverage standards and housekeeping efficiency.',
 
+                contactPre: 'Discreet & Professional',
                 contactTitle: 'Elevate Your Standards',
-                contactText: "Contact RudiBudi Checkers for a confidential discussion about your property's mystery shopping needs.",
+                contactText: "Contact Noble Audits for a confidential discussion about your property's specific requirements.",
                 contactBtn: 'Contact Brendon'
             },
             hu: {
-                navAbout: 'Rólunk',
+                navAbout: 'Örökség',
                 navServices: 'Szolgáltatások',
-                heroSubtitle: 'Globális Minőségbiztosítás',
-                heroTitle: 'A Luxus Vendéglátás <br> <i class="font-serif text-stone-600">Mércéje.</i>',
-                heroDesc: "Nem csak szabványokat mérünk, hanem érzelmeket is. A RudiBudi Checkers olyan adatokat szolgáltat, amelyek a vendégeket élethosszig tartó hívekké változtatják.",
-                ctaButton: 'Konzultáció Kérése',
+                heroSubtitle: 'Brit Precizitás. Globális Színvonal.',
+                heroTitle: 'Megalkuvást Nem Tűrő <br> <i class="font-serif text-gold-600">Audit Kiválóság.</i>',
+                heroDesc: "A Noble Audits a kendőzetlen igazságot tárja fel a vendégélményről. Brendon Rudolph vezetésével a klasszikus brit alaposságot ötvözzük a modern vendéglátással.",
+                ctaButton: 'Ajánlatkérés',
                 
-                aboutTitle: 'Évtizedes Szakmai Tapasztalat',
-                aboutText1: 'A Brendon Rudolph által alapított RudiBudi Checkers több mint 25 éve kizárólag a vendéglátó- és utazási iparra összpontosít. Az általános kutatócégekkel ellentétben mi beszéljük a luxus nyelvét. Értjük, hogy 5 csillagos környezetben a kávé felszolgálása önmagában nem elég; a kiszolgálás bája, időzítése és érzelmi kapcsolata a lényeg.',
-                aboutText2: 'A budapesti butikszállodáktól a maldív-szigeteki üdülőhelyekig ellenőreink tapasztalt utazók, akik tökéletesen illeszkednek az Ön vendégprofiljához. Olyan részletes adatokkal látjuk el a vezetőséget, amelyek szükségesek a működés finomhangolásához és a vendégélmény emeléséhez.',
+                aboutTitle: 'Brit Szabványok Öröksége',
+                aboutText1: 'Brendon Rudolph alapító a londoni nagyszállodák szigorú etikettjéből merítve hozta létre a Noble Audits-ot, hogy a nemzetközi piacon magasabb szintű értékelést nyújtson. Mi nem csupán rubrikákat pipálunk ki; a kifogástalan kiszolgálás hagyományait őrizzük.',
+                aboutText2: 'Budapesti székhellyel, de brit mentalitással működő csapatunk rendelkezik azzal a kifinomult szemlélettel, amely szükséges a legkisebb protokolláris eltérések észleléséhez. Legyen szó királyi fenségekről vagy rocksztárokról, személyzetének hibátlanul kell teljesítenie. Mi biztosítjuk ezt.',
 
-                serv1Title: 'Márka Megfelelőség',
-                serv1Desc: "Szigorúan teszteljük a márka szabványos működési eljárásainak (SOP) betartását. Biztosítsa, hogy márk ígérete következetes maradjon, legyen szó Londonról, New Yorkról vagy Budapestről.",
-                serv2Title: 'Érzelmi Auditok',
-                serv2Desc: 'A funkcionális ellenőrző listákon túl mérjük az elköteleződés "melegségét". Felvette-e a szemkontaktust a személyzet? Előre látták-e az igényeket? Mi számszerűsítjük a számszerűsíthetetlent.',
-                serv3Title: 'Versenytárs Elemzés',
-                serv3Desc: 'Lássa tisztán, hogyan teljesít a versenytársakkal szemben. Értékelőket küldünk riválisaihoz, hogy közvetlen összehasonlítást nyújtsunk a szolgáltatási szintekről.',
+                servHeading: 'Kiemelt Audit Megoldások',
+                servSub: 'Az Ön működési igényeire szabva',
+                
+                rushBadge: 'Legnépszerűbb',
+                rushTitle: 'A Kétórás "Rush" Audit',
+                rushDesc: 'Gyors, nagy hatású értékelés azonnali visszajelzéshez. Auditorunk egy koncentrált időablakon belül ellenőrzi a kritikus érintkezési pontokat: Érkezés, Recepció hatékonysága és Bárszolgáltatás. Tökéletes a csúcsidőbeni szúrópróbákhoz.',
+                rushFeat1: 'Azonnali szóbeli jelentés',
+                rushFeat2: 'Fókusz az első benyomásra',
+                rushFeat3: 'Költséghatékony pillanatkép',
+
+                fullBadge: 'Arany Standard',
+                fullTitle: 'Az Átfogó Egész Napos Audit',
+                fullDesc: 'A végleges mélyelemzés. Az auditor 24 órára elmerül a szolgáltatásokban, több mint 300 SOP kritériumot értékelve a Housekeeping, F&B, Concierge és Spa területeken. Ez az 5 csillagos akkreditációhoz szükséges igazságügyi elemzés.',
+                fullFeat1: 'Teljes vendégút feltérképezése',
+                fullFeat2: 'Éjszakai tartózkodás és reggeli',
+                fullFeat3: 'Részletes stratégiai jelentés',
+
+                addonTitle: 'Kiegészítő Szolgáltatások',
+                add1Title: 'Sommelier Teszt',
+                add1Desc: 'Borismeret és upselling készségek tesztelése a fine dining éttermekben.',
+                add2Title: 'A Lehetetlen Kérés',
+                add2Desc: 'A Concierge kihívása nehéz kérésekkel a találékonyság tesztelésére.',
+                add3Title: 'Késő Éjszakai Érkezés',
+                add3Desc: 'Az éjszakai műszak energiaszintjének és szabványainak auditálása.',
 
                 portTitle: 'Kiemelt Partnerek',
-                portSub: 'Budapest és Nemzetközi',
+                portSub: 'Kiválóság Budapesten',
                 hotel1Desc: 'Átfogó működési auditok, különös tekintettel a "Lady in Red" vendégkapcsolati programra és a magas szintű concierge szolgáltatásokra.',
                 hotel2Desc: 'A történelmi Adria Palota stratégiai értékelése, fókuszban az étel- és italszolgáltatási szabványokkal és a housekeeping hatékonyságával.',
 
+                contactPre: 'Diszkrét és Professzionális',
                 contactTitle: 'Emelje Szabványait',
-                contactText: "Lépjen kapcsolatba a RudiBudi Checkers-szel egy bizalmas megbeszélésért szállodája próbavásárlási igényeiről.",
+                contactText: "Lépjen kapcsolatba a Noble Audits-szal egy bizalmas megbeszélésért az ingatlana specifikus igényeiről.",
                 contactBtn: 'Kapcsolatfelvétel'
             }
         };
