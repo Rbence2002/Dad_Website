@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Web Developer Portfolio</title>
+    <title>Rudolph Mystery Shopping & CX</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -18,37 +18,36 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                     },
                     colors: {
-                        zinc: {
-                            850: '#1f1f22', // Custom lighter background for cards
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9', // Sky blue for a fresh, bright look
+                            600: '#0284c7',
+                            900: '#0c4a6e', // Deep Navy for text
                         }
                     }
                 }
             }
         }
     </script>
-    
-    <style>
-        /* Custom tweaks for ultra-minimalism */
-        body {
-            font-feature-settings: "cv11", "ss01";
-        }
-    </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
 
-    <nav class="fixed w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                <i data-lucide="code-2" class="w-6 h-6 text-indigo-500"></i>
-                <span class="hidden sm:inline">AlexDev</span>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+                <div class="bg-brand-600 text-white p-1.5 rounded-lg">
+                    <i data-lucide="search-check" class="w-5 h-5"></i>
+                </div>
+                <span>Rudolph<span class="text-brand-600">CX</span></span>
             </a>
             
             <div class="flex items-center gap-6">
-                <button id="lang-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-700 hover:border-zinc-500 transition-colors text-sm font-medium">
-                    <i data-lucide="globe" class="w-4 h-4"></i>
+                <button id="lang-toggle" class="flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-slate-300 transition-all text-sm font-semibold text-slate-700 shadow-sm">
+                    <i data-lucide="globe" class="w-4 h-4 text-brand-600"></i>
                     <span id="current-lang-text">EN</span>
                 </button>
             </div>
@@ -57,118 +56,157 @@
 
     <main>
         
-        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 relative overflow-hidden">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
+        <section class="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-20 relative overflow-hidden bg-white">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-100/50 via-white to-white -z-10"></div>
             
-            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 max-w-4xl leading-tight" data-i18n="heroTitle">
-                Crafting Digital <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Experiences.</span>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                <span data-i18n="heroBadge">Premium Quality Assurance</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight mb-6 max-w-5xl leading-[1.1]" data-i18n="heroTitle">
+                Elevating Hospitality <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Through Insight.</span>
             </h1>
-            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed" data-i18n="heroBio">
-                Senior Web Developer specializing in building accessible, high-performance, and minimalist web applications that scale.
+            
+            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-10 leading-relaxed" data-i18n="heroBio">
+                Elite Mystery Shopping & Customer Experience auditing led by Brendon Rudolph. We help luxury brands perfect their service standards.
             </p>
-            <div class="flex gap-4">
-                <a href="#contact" class="px-8 py-3 bg-white text-zinc-900 rounded-lg font-semibold hover:bg-zinc-200 transition-colors" data-i18n="ctaPrimary">
-                    Get in Touch
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact" class="px-8 py-4 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1" data-i18n="ctaPrimary">
+                    Request an Audit
                 </a>
-                <a href="#services" class="px-8 py-3 border border-zinc-700 text-white rounded-lg font-semibold hover:bg-zinc-900 transition-colors" data-i18n="ctaSecondary">
-                    View Services
+                <a href="#clients" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-50 transition-all shadow-sm hover:shadow-md" data-i18n="ctaSecondary">
+                    Our Clients
                 </a>
             </div>
         </section>
 
-        <section id="services" class="py-24 bg-zinc-900/50">
+        <section id="services" class="py-24 bg-slate-50">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4" data-i18n="servicesTitle">Expertise</h2>
-                    <div class="h-1 w-20 bg-indigo-500 rounded-full"></div>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4" data-i18n="servicesTitle">Our Services</h2>
+                    <div class="h-1 w-20 bg-brand-500 rounded-full mx-auto"></div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all duration-300 group">
-                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
-                            <i data-lucide="layout" class="w-6 h-6"></i>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-brand-600 group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="service1Title">Frontend Development</h3>
-                        <p class="text-zinc-400" data-i18n="service1Desc">
-                            Building responsive, pixel-perfect user interfaces using modern frameworks like React, Vue, and Tailwind CSS.
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="service1Title">Mystery Shopping</h3>
+                        <p class="text-slate-500 leading-relaxed" data-i18n="service1Desc">
+                            Unannounced, detailed evaluations of your guest experience, covering check-in, dining, and concierge services.
                         </p>
                     </div>
 
-                    <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all duration-300 group">
-                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
-                            <i data-lucide="server" class="w-6 h-6"></i>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-brand-600 group-hover:scale-110 transition-transform">
+                            <i data-lucide="clipboard-list" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="service2Title">Backend Architecture</h3>
-                        <p class="text-zinc-400" data-i18n="service2Desc">
-                            Designing robust APIs and database structures that ensure security, speed, and reliability.
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="service2Title">Brand Standards Audit</h3>
+                        <p class="text-slate-500 leading-relaxed" data-i18n="service2Desc">
+                            Rigorous verification to ensure your global brand operational standards are met consistently across all locations.
                         </p>
                     </div>
 
-                    <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all duration-300 group">
-                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
-                            <i data-lucide="zap" class="w-6 h-6"></i>
+                    <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-300 group">
+                        <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-brand-600 group-hover:scale-110 transition-transform">
+                            <i data-lucide="trending-up" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="service3Title">Performance Optimization</h3>
-                        <p class="text-zinc-400" data-i18n="service3Desc">
-                            Auditing and refactoring existing codebases to improve load times, SEO ranking, and Core Web Vitals.
+                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="service3Title">CX Consulting</h3>
+                        <p class="text-slate-500 leading-relaxed" data-i18n="service3Desc">
+                            Strategic advice led by Brendon Rudolph to turn audit data into actionable training and service improvements.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="references" class="py-24">
+        <section id="clients" class="py-24 bg-white">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="mb-16">
-                    <h2 class="text-3xl font-bold text-white mb-4" data-i18n="refTitle">Client Words</h2>
-                    <div class="h-1 w-20 bg-indigo-500 rounded-full"></div>
+                <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-2" data-i18n="refTitle">Trusted Partners</h2>
+                        <p class="text-slate-500 max-w-md" data-i18n="refSub">We work with the world's most prestigious hospitality brands.</p>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="relative p-8 border-l-4 border-zinc-700 bg-zinc-900/30">
-                        <i data-lucide="quote" class="absolute top-6 right-6 text-zinc-800 w-10 h-10"></i>
-                        <p class="text-lg text-zinc-300 italic mb-6" data-i18n="ref1Text">
-                            "The attention to detail and code quality was outstanding. Our platform is faster than ever and our users love the new design."
-                        </p>
-                        <div>
-                            <p class="font-bold text-white">Sarah Jenkins</p>
-                            <p class="text-sm text-zinc-500">CTO, TechFlow</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-64 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop" alt="Luxury Hotel Interior" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-4 py-1 rounded text-xs font-bold tracking-widest text-slate-900 uppercase">
+                                Budapest
+                            </div>
+                        </div>
+                        <div class="p-8 bg-white">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Kempinski Hotel Corvinus</h3>
+                            <div class="flex text-yellow-400 mb-4 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-slate-600 italic text-sm" data-i18n="ref1Text">
+                                "Rudolph CX provided invaluable insights into our front-desk operations. Their detailed reporting helped us refine our guest welcome experience significantly."
+                            </p>
                         </div>
                     </div>
 
-                    <div class="relative p-8 border-l-4 border-zinc-700 bg-zinc-900/30">
-                        <i data-lucide="quote" class="absolute top-6 right-6 text-zinc-800 w-10 h-10"></i>
-                        <p class="text-lg text-zinc-300 italic mb-6" data-i18n="ref2Text">
-                            "A true professional who understands both the technical and business requirements. Delivered ahead of schedule."
-                        </p>
-                        <div>
-                            <p class="font-bold text-white">Nagy Gábor</p>
-                            <p class="text-sm text-zinc-500">CEO, FutureSystems</p>
+                    <div class="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
+                        <div class="h-64 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" alt="Classical Hotel Facade" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-4 py-1 rounded text-xs font-bold tracking-widest text-slate-900 uppercase">
+                                International
+                            </div>
+                        </div>
+                        <div class="p-8 bg-white">
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Le Méridien</h3>
+                            <div class="flex text-yellow-400 mb-4 gap-1">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <p class="text-slate-600 italic text-sm" data-i18n="ref2Text">
+                                "Brendon and his team understand the nuance of luxury. Their audits are thorough, fair, and incredibly useful for our general managers."
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-24 bg-zinc-900 border-t border-zinc-800">
-            <div class="max-w-3xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-i18n="contactTitle">Let's work together</h2>
-                <p class="text-zinc-400 mb-10 text-lg" data-i18n="contactSub">
-                    Have a project in mind? Send me an email and let's discuss how we can bring your vision to life.
+        <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500 rounded-full blur-[100px] opacity-20 translate-x-1/2 -translate-y-1/2"></div>
+
+            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+                <div class="mb-6 inline-flex items-center justify-center p-3 bg-slate-800 rounded-full">
+                    <i data-lucide="mail-check" class="w-6 h-6 text-brand-400"></i>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6" data-i18n="contactTitle">Ready to improve your score?</h2>
+                <p class="text-slate-300 mb-10 text-lg md:text-xl leading-relaxed" data-i18n="contactSub">
+                    Contact Brendon Rudolph today to discuss a custom mystery shopping program for your hotel or venue.
                 </p>
                 
                 <div class="inline-flex flex-col items-center">
-                    <a href="mailto:hello@alexdev.com" class="group flex items-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/20">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
-                        <span data-i18n="emailBtn">Email Me</span>
+                    <a href="mailto:brendon@rudolphcx.com" class="group flex items-center gap-3 bg-brand-600 hover:bg-brand-500 text-white px-10 py-5 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-brand-900/50">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        <span data-i18n="emailBtn">Get in Touch</span>
                     </a>
-                    <span class="mt-4 text-zinc-500 text-sm">hello@alexdev.com</span>
+                    <span class="mt-6 text-slate-500 text-sm tracking-wide">BRENDON@RUDOLPHCX.COM</span>
                 </div>
             </div>
         </section>
 
-        <footer class="py-8 bg-zinc-950 border-t border-zinc-800 text-center">
-            <p class="text-zinc-600 text-sm">© 2024 AlexDev. All rights reserved.</p>
+        <footer class="py-10 bg-slate-50 border-t border-slate-200 text-center">
+            <p class="text-slate-500 text-sm font-medium">© 2024 Rudolph Mystery Shopping & CX. All rights reserved.</p>
         </footer>
     </main>
 
@@ -177,55 +215,59 @@
         const translations = {
             en: {
                 // Hero
-                heroTitle: 'Crafting Digital <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Experiences.</span>',
-                heroBio: 'Senior Web Developer specializing in building accessible, high-performance, and minimalist web applications that scale.',
-                ctaPrimary: 'Get in Touch',
-                ctaSecondary: 'View Services',
+                heroBadge: 'Premium Quality Assurance',
+                heroTitle: 'Elevating Hospitality <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Through Insight.</span>',
+                heroBio: 'Elite Mystery Shopping & Customer Experience auditing led by Brendon Rudolph. We help luxury brands perfect their service standards.',
+                ctaPrimary: 'Request an Audit',
+                ctaSecondary: 'Our Clients',
                 
                 // Services
-                servicesTitle: 'Expertise',
-                service1Title: 'Frontend Development',
-                service1Desc: 'Building responsive, pixel-perfect user interfaces using modern frameworks like React, Vue, and Tailwind CSS.',
-                service2Title: 'Backend Architecture',
-                service2Desc: 'Designing robust APIs and database structures that ensure security, speed, and reliability.',
-                service3Title: 'Performance Optimization',
-                service3Desc: 'Auditing and refactoring existing codebases to improve load times, SEO ranking, and Core Web Vitals.',
+                servicesTitle: 'Our Services',
+                service1Title: 'Mystery Shopping',
+                service1Desc: 'Unannounced, detailed evaluations of your guest experience, covering check-in, dining, and concierge services.',
+                service2Title: 'Brand Standards Audit',
+                service2Desc: 'Rigorous verification to ensure your global brand operational standards are met consistently across all locations.',
+                service3Title: 'CX Consulting',
+                service3Desc: 'Strategic advice led by Brendon Rudolph to turn audit data into actionable training and service improvements.',
 
                 // References
-                refTitle: 'Client Words',
-                ref1Text: '"The attention to detail and code quality was outstanding. Our platform is faster than ever and our users love the new design."',
-                ref2Text: '"A true professional who understands both the technical and business requirements. Delivered ahead of schedule."',
+                refTitle: 'Trusted Partners',
+                refSub: "We work with the world's most prestigious hospitality brands.",
+                ref1Text: '"Rudolph CX provided invaluable insights into our front-desk operations. Their detailed reporting helped us refine our guest welcome experience significantly."',
+                ref2Text: '"Brendon and his team understand the nuance of luxury. Their audits are thorough, fair, and incredibly useful for our general managers."',
 
                 // Contact
-                contactTitle: "Let's work together",
-                contactSub: "Have a project in mind? Send me an email and let's discuss how we can bring your vision to life.",
-                emailBtn: 'Email Me'
+                contactTitle: "Ready to improve your score?",
+                contactSub: "Contact Brendon Rudolph today to discuss a custom mystery shopping program for your hotel or venue.",
+                emailBtn: 'Get in Touch'
             },
             hu: {
                 // Hero
-                heroTitle: 'Digitális Élményeket <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Építek.</span>',
-                heroBio: 'Senior webfejlesztő, hozzáférhető, nagy teljesítményű és minimalista webes alkalmazások építésére szakosodva.',
-                ctaPrimary: 'Kapcsolat',
-                ctaSecondary: 'Szolgáltatások',
+                heroBadge: 'Prémium Minőségbiztosítás',
+                heroTitle: 'A Vendéglátás Szintjének <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Emelése.</span>',
+                heroBio: 'Elit Próbavásárlás (Mystery Shopping) és Ügyfélélmény auditálás Brendon Rudolph vezetésével. Segítünk a luxusmárkáknak tökéletesíteni szolgáltatásaikat.',
+                ctaPrimary: 'Audit Kérése',
+                ctaSecondary: 'Ügyfeleink',
                 
                 // Services
-                servicesTitle: 'Szakértelem',
-                service1Title: 'Frontend Fejlesztés',
-                service1Desc: 'Reszponzív, pixelpontos felhasználói felületek készítése modern keretrendszerekkel, mint a React, Vue és Tailwind CSS.',
-                service2Title: 'Backend Architektúra',
-                service2Desc: 'Robusztus API-k és adatbázis-struktúrák tervezése, amelyek garantálják a biztonságot, sebességet és megbízhatóságot.',
-                service3Title: 'Teljesítmény Optimalizálás',
-                service3Desc: 'Meglévő kódbázisok auditálása és refaktorálása a betöltési idők, a SEO rangsorolás és a Core Web Vitals javítása érdekében.',
+                servicesTitle: 'Szolgáltatásaink',
+                service1Title: 'Próbavásárlás (Mystery Shopping)',
+                service1Desc: 'Be nem jelentett, részletes értékelések a vendégélményről, beleértve a bejelentkezést, az étkezést és a concierge szolgáltatásokat.',
+                service2Title: 'Márkaszabvány Audit',
+                service2Desc: 'Szigorú ellenőrzés annak biztosítására, hogy globális működési szabványai minden helyszínen következetesen teljesüljenek.',
+                service3Title: 'CX Tanácsadás',
+                service3Desc: 'Stratégiai tanácsadás Brendon Rudolph vezetésével, hogy az auditadatokat gyakorlati tréningekké és fejlesztésekké alakítsuk.',
 
                 // References
-                refTitle: 'Ügyfelek Véleménye',
-                ref1Text: '"A részletekre való odafigyelés és a kód minősége kiemelkedő volt. A platformunk gyorsabb, mint valaha, és a felhasználók imádják az új dizájnt."',
-                ref2Text: '"Igazi profi, aki érti mind a technikai, mind az üzleti követelményeket. A határidő előtt szállította a projektet."',
+                refTitle: 'Kiemelt Partnereink',
+                refSub: "A világ legelőkelőbb vendéglátó márkáival dolgozunk együtt.",
+                ref1Text: '"A Rudolph CX felbecsülhetetlen értékű betekintést nyújtott a recepciós működésünkbe. Jelentéseik segítségével jelentősen finomítottuk vendégfogadási folyamatainkat."',
+                ref2Text: '"Brendon és csapata érti a luxus árnyalatait. Auditjaik alaposak, igazságosak és hihetetlenül hasznosak az igazgatóink számára."',
 
                 // Contact
-                contactTitle: "Dolgozzunk együtt",
-                contactSub: "Van egy projektötlete? Küldjön e-mailt, és beszéljük meg, hogyan valósíthatjuk meg elképzeléseit.",
-                emailBtn: 'Írj nekem'
+                contactTitle: "Készen áll a pontszám javítására?",
+                contactSub: "Lépjen kapcsolatba Brendon Rudolph-fal még ma, és egyeztessünk egy személyre szabott próbavásárlási programról.",
+                emailBtn: 'Írjon nekünk'
             }
         };
 
@@ -241,7 +283,7 @@
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) {
-                    // Check if the translation contains HTML tags (for the Hero title gradient)
+                    // Check if translation contains HTML (for gradients etc)
                     if (translations[lang][key].includes('<')) {
                         el.innerHTML = translations[lang][key];
                     } else {
@@ -253,7 +295,7 @@
             // Update Toggle Button Text
             langText.textContent = lang === 'en' ? 'EN' : 'HU';
             
-            // Re-render icons if any were overwritten (safety check, though not strictly needed for this content structure)
+            // Re-render icons if needed (safety)
             lucide.createIcons();
         }
 
