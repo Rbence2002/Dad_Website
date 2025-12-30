@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rudolph Mystery Shopping & CX</title>
+    <title>RudiBudi Checkers | Luxury Hospitality Auditing</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -18,272 +18,269 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9', // Sky blue for a fresh, bright look
-                            600: '#0284c7',
-                            900: '#0c4a6e', // Deep Navy for text
+                        stone: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        gold: {
+                            500: '#bfa15f',
+                            600: '#a38748',
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Elegant selection color */
+        ::selection {
+            background-color: #292524;
+            color: #bfa15f;
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
-                <div class="bg-brand-600 text-white p-1.5 rounded-lg">
-                    <i data-lucide="search-check" class="w-5 h-5"></i>
-                </div>
-                <span>Rudolph<span class="text-brand-600">CX</span></span>
+    <nav class="fixed w-full z-50 bg-stone-50/95 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="flex flex-col">
+                <span class="font-serif text-2xl font-bold text-stone-900 tracking-tight">RudiBudi Checkers</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-gold-600 font-bold">Est. 1995</span>
             </a>
             
-            <div class="flex items-center gap-6">
-                <button id="lang-toggle" class="flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-slate-50 hover:bg-slate-100 hover:border-slate-300 transition-all text-sm font-semibold text-slate-700 shadow-sm">
-                    <i data-lucide="globe" class="w-4 h-4 text-brand-600"></i>
+            <div class="flex items-center gap-8">
+                <a href="#about" class="hidden md:block text-sm font-bold uppercase tracking-widest hover:text-gold-600 transition-colors" data-i18n="navAbout">About</a>
+                <a href="#services" class="hidden md:block text-sm font-bold uppercase tracking-widest hover:text-gold-600 transition-colors" data-i18n="navServices">Services</a>
+                
+                <button id="lang-toggle" class="flex items-center gap-2 px-4 py-2 border border-stone-300 rounded-sm hover:border-stone-800 transition-all text-xs font-bold uppercase tracking-widest">
                     <span id="current-lang-text">EN</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <main>
+    <main class="pt-24">
         
-        <section class="min-h-[90vh] flex flex-col justify-center items-center text-center px-6 pt-20 relative overflow-hidden bg-white">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-100/50 via-white to-white -z-10"></div>
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-bold uppercase tracking-wide mb-6">
-                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                <span data-i18n="heroBadge">Premium Quality Assurance</span>
-            </div>
-
-            <h1 class="text-5xl md:text-7xl font-bold text-slate-900 tracking-tight mb-6 max-w-5xl leading-[1.1]" data-i18n="heroTitle">
-                Elevating Hospitality <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Through Insight.</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-10 leading-relaxed" data-i18n="heroBio">
-                Elite Mystery Shopping & Customer Experience auditing led by Brendon Rudolph. We help luxury brands perfect their service standards.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" class="px-8 py-4 bg-slate-900 text-white rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1" data-i18n="ctaPrimary">
-                    Request an Audit
-                </a>
-                <a href="#clients" class="px-8 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-semibold hover:bg-slate-50 transition-all shadow-sm hover:shadow-md" data-i18n="ctaSecondary">
-                    Our Clients
-                </a>
-            </div>
-        </section>
-
-        <section id="services" class="py-24 bg-slate-50">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4" data-i18n="servicesTitle">Our Services</h2>
-                    <div class="h-1 w-20 bg-brand-500 rounded-full mx-auto"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-300 group">
-                        <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-brand-600 group-hover:scale-110 transition-transform">
-                            <i data-lucide="user-check" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="service1Title">Mystery Shopping</h3>
-                        <p class="text-slate-500 leading-relaxed" data-i18n="service1Desc">
-                            Unannounced, detailed evaluations of your guest experience, covering check-in, dining, and concierge services.
-                        </p>
-                    </div>
-
-                    <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-300 group">
-                        <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-brand-600 group-hover:scale-110 transition-transform">
-                            <i data-lucide="clipboard-list" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="service2Title">Brand Standards Audit</h3>
-                        <p class="text-slate-500 leading-relaxed" data-i18n="service2Desc">
-                            Rigorous verification to ensure your global brand operational standards are met consistently across all locations.
-                        </p>
-                    </div>
-
-                    <div class="p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-brand-100/50 transition-all duration-300 group">
-                        <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-brand-600 group-hover:scale-110 transition-transform">
-                            <i data-lucide="trending-up" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-3" data-i18n="service3Title">CX Consulting</h3>
-                        <p class="text-slate-500 leading-relaxed" data-i18n="service3Desc">
-                            Strategic advice led by Brendon Rudolph to turn audit data into actionable training and service improvements.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="clients" class="py-24 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4">
-                    <div>
-                        <h2 class="text-3xl font-bold text-slate-900 mb-2" data-i18n="refTitle">Trusted Partners</h2>
-                        <p class="text-slate-500 max-w-md" data-i18n="refSub">We work with the world's most prestigious hospitality brands.</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                        <div class="h-64 overflow-hidden relative">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop" alt="Luxury Hotel Interior" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-4 py-1 rounded text-xs font-bold tracking-widest text-slate-900 uppercase">
-                                Budapest
-                            </div>
-                        </div>
-                        <div class="p-8 bg-white">
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Kempinski Hotel Corvinus</h3>
-                            <div class="flex text-yellow-400 mb-4 gap-1">
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            </div>
-                            <p class="text-slate-600 italic text-sm" data-i18n="ref1Text">
-                                "Rudolph CX provided invaluable insights into our front-desk operations. Their detailed reporting helped us refine our guest welcome experience significantly."
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                        <div class="h-64 overflow-hidden relative">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10"></div>
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop" alt="Classical Hotel Facade" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
-                            <div class="absolute bottom-4 left-4 z-20 bg-white/90 backdrop-blur-sm px-4 py-1 rounded text-xs font-bold tracking-widest text-slate-900 uppercase">
-                                International
-                            </div>
-                        </div>
-                        <div class="p-8 bg-white">
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Le Méridien</h3>
-                            <div class="flex text-yellow-400 mb-4 gap-1">
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            </div>
-                            <p class="text-slate-600 italic text-sm" data-i18n="ref2Text">
-                                "Brendon and his team understand the nuance of luxury. Their audits are thorough, fair, and incredibly useful for our general managers."
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500 rounded-full blur-[100px] opacity-20 translate-x-1/2 -translate-y-1/2"></div>
-
-            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
-                <div class="mb-6 inline-flex items-center justify-center p-3 bg-slate-800 rounded-full">
-                    <i data-lucide="mail-check" class="w-6 h-6 text-brand-400"></i>
-                </div>
-                <h2 class="text-3xl md:text-5xl font-bold mb-6" data-i18n="contactTitle">Ready to improve your score?</h2>
-                <p class="text-slate-300 mb-10 text-lg md:text-xl leading-relaxed" data-i18n="contactSub">
-                    Contact Brendon Rudolph today to discuss a custom mystery shopping program for your hotel or venue.
-                </p>
-                
-                <div class="inline-flex flex-col items-center">
-                    <a href="mailto:brendon@rudolphcx.com" class="group flex items-center gap-3 bg-brand-600 hover:bg-brand-500 text-white px-10 py-5 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-brand-900/50">
-                        <i data-lucide="send" class="w-5 h-5"></i>
-                        <span data-i18n="emailBtn">Get in Touch</span>
+        <section class="relative py-20 md:py-32 px-6 border-b border-stone-200">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="block text-gold-600 font-bold tracking-[0.2em] uppercase text-sm mb-6" data-i18n="heroSubtitle">Global Quality Assurance</span>
+                    <h1 class="font-serif text-5xl md:text-7xl text-stone-900 leading-[1.1] mb-8" data-i18n="heroTitle">
+                        The Standard for <br> <i class="font-serif text-stone-600">Luxury Hospitality.</i>
+                    </h1>
+                    <p class="text-lg text-stone-600 leading-relaxed max-w-lg mb-10" data-i18n="heroDesc">
+                        We don't just measure standards; we measure emotion. RudiBudi Checkers provides the data that turns guests into lifelong advocates.
+                    </p>
+                    <a href="#contact" class="inline-block bg-stone-900 text-stone-50 px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gold-600 transition-colors" data-i18n="ctaButton">
+                        Schedule Consultation
                     </a>
-                    <span class="mt-6 text-slate-500 text-sm tracking-wide">BRENDON@RUDOLPHCX.COM</span>
+                </div>
+                
+                <div class="relative h-[500px] w-full bg-stone-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565060169387-a22b7c756247?q=80&w=2070&auto=format&fit=crop" alt="Luxury Hotel Lobby Detail" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                    <div class="absolute bottom-0 left-0 bg-stone-900 text-white p-6 w-full md:w-auto">
+                        <p class="font-serif text-2xl italic">"Excellence is in the details."</p>
+                        <p class="text-xs uppercase tracking-widest mt-2 text-gold-500">- Brendon Rudolph</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <footer class="py-10 bg-slate-50 border-t border-slate-200 text-center">
-            <p class="text-slate-500 text-sm font-medium">© 2024 Rudolph Mystery Shopping & CX. All rights reserved.</p>
-        </footer>
+        <section id="about" class="py-24 bg-white border-b border-stone-200">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <i data-lucide="clock" class="w-8 h-8 text-gold-600 mx-auto mb-6"></i>
+                <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-8" data-i18n="aboutTitle">Decades of Unrivaled Insight</h2>
+                <div class="prose prose-lg mx-auto text-stone-600">
+                    <p class="mb-6 leading-relaxed" data-i18n="aboutText1">
+                        Founded by Brendon Rudolph, RudiBudi Checkers has spent over 25 years strictly focused on the hospitality and travel industries. Unlike generalist research firms, we speak the language of luxury. We understand that in a 5-star environment, it is not enough to simply serve coffee; it is about the grace, timing, and emotional connection of the service.
+                    </p>
+                    <p class="leading-relaxed" data-i18n="aboutText2">
+                        From boutique hideaways in Budapest to sprawling resorts in the Maldives, our evaluators are seasoned travelers who match your guest profile perfectly. We empower leadership teams with the granular data needed to refine operations and elevate the guest experience.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="border-b border-stone-200">
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-200">
+                <div class="p-12 hover:bg-stone-100 transition-colors group">
+                    <div class="mb-6 text-stone-900 group-hover:text-gold-600 transition-colors">
+                        <i data-lucide="clipboard-check" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 mb-4" data-i18n="serv1Title">Brand Compliance</h3>
+                    <p class="text-stone-600 leading-relaxed text-sm" data-i18n="serv1Desc">
+                        We rigorously test adherence to your brand's Standard Operating Procedures (SOPs). Ensure that your brand promise is kept consistent, whether in London, New York, or Budapest.
+                    </p>
+                </div>
+
+                <div class="p-12 hover:bg-stone-100 transition-colors group">
+                    <div class="mb-6 text-stone-900 group-hover:text-gold-600 transition-colors">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 mb-4" data-i18n="serv2Title">Emotional Audits</h3>
+                    <p class="text-stone-600 leading-relaxed text-sm" data-i18n="serv2Desc">
+                        Moving beyond functional checklists, we measure the "warmth" of engagement. Did the staff make eye contact? Did they anticipate needs? We quantify the unquantifiable.
+                    </p>
+                </div>
+
+                <div class="p-12 hover:bg-stone-100 transition-colors group">
+                    <div class="mb-6 text-stone-900 group-hover:text-gold-600 transition-colors">
+                        <i data-lucide="bar-chart-2" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-stone-900 mb-4" data-i18n="serv3Title">Competitive Benchmarking</h3>
+                    <p class="text-stone-600 leading-relaxed text-sm" data-i18n="serv3Desc">
+                        See exactly how you stack up against your competitive set. We deploy evaluators to your rivals to provide a direct comparison of service levels and amenities.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 bg-stone-100">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16 border-l-4 border-gold-600 pl-6">
+                    <h2 class="font-serif text-4xl text-stone-900 mb-2" data-i18n="portTitle">Selected Partnerships</h2>
+                    <p class="text-stone-500 uppercase tracking-widest text-sm" data-i18n="portSub">Budapest & International</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    
+                    <div class="bg-white p-2 shadow-sm hover:shadow-xl transition-shadow duration-500">
+                        <div class="relative h-80 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Kempinski_Hotel_Corvinus_Budapest_facade.jpg/1280px-Kempinski_Hotel_Corvinus_Budapest_facade.jpg" 
+                                 alt="Kempinski Hotel Corvinus Budapest" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1">
+                                <span class="text-[10px] font-bold tracking-widest uppercase">Since 2010</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="font-serif text-2xl text-stone-900 mb-2">Kempinski Hotel Corvinus</h3>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-widest mb-4">Budapest, Hungary</p>
+                            <p class="text-stone-600 text-sm leading-relaxed" data-i18n="hotel1Desc">
+                                Comprehensive operational audits focusing on the "Lady in Red" guest relations program and high-touch concierge services.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-2 shadow-sm hover:shadow-xl transition-shadow duration-500">
+                        <div class="relative h-80 overflow-hidden">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ritz-Carlton_Budapest.JPG/1280px-Ritz-Carlton_Budapest.JPG" 
+                                 alt="Le Meridien Budapest Building" 
+                                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1">
+                                <span class="text-[10px] font-bold tracking-widest uppercase">Historic Audit</span>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <h3 class="font-serif text-2xl text-stone-900 mb-2">Le Méridien Budapest</h3>
+                            <p class="text-xs font-bold text-gold-600 uppercase tracking-widest mb-4">Budapest, Hungary</p>
+                            <p class="text-stone-600 text-sm leading-relaxed" data-i18n="hotel2Desc">
+                                Strategic evaluations of the historic Adria Palace property, focusing on food & beverage standards and housekeeping efficiency.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-stone-900 text-stone-300 py-24 px-6 border-t border-gold-600">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="font-serif text-4xl md:text-5xl text-white mb-8" data-i18n="contactTitle">Elevate Your Standards</h2>
+                <p class="text-lg mb-12 max-w-xl mx-auto text-stone-400" data-i18n="contactText">
+                    Contact RudiBudi Checkers for a confidential discussion about your property's mystery shopping needs.
+                </p>
+                <a href="mailto:brendon@rudibudicheckers.com" class="inline-flex items-center gap-3 border border-stone-600 px-10 py-5 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-stone-900 hover:border-white transition-all duration-300">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span data-i18n="contactBtn">Contact Brendon</span>
+                </a>
+                
+                <div class="mt-24 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest uppercase text-stone-600">
+                    <p>&copy; 2024 RudiBudi Checkers.</p>
+                    <p>Budapest &bull; Vienna &bull; International</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script>
-        // 1. Translation Data
+        // Translations
         const translations = {
             en: {
-                // Hero
-                heroBadge: 'Premium Quality Assurance',
-                heroTitle: 'Elevating Hospitality <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Through Insight.</span>',
-                heroBio: 'Elite Mystery Shopping & Customer Experience auditing led by Brendon Rudolph. We help luxury brands perfect their service standards.',
-                ctaPrimary: 'Request an Audit',
-                ctaSecondary: 'Our Clients',
+                navAbout: 'About',
+                navServices: 'Services',
+                heroSubtitle: 'Global Quality Assurance',
+                heroTitle: 'The Standard for <br> <i class="font-serif text-stone-600">Luxury Hospitality.</i>',
+                heroDesc: "We don't just measure standards; we measure emotion. RudiBudi Checkers provides the data that turns guests into lifelong advocates.",
+                ctaButton: 'Schedule Consultation',
                 
-                // Services
-                servicesTitle: 'Our Services',
-                service1Title: 'Mystery Shopping',
-                service1Desc: 'Unannounced, detailed evaluations of your guest experience, covering check-in, dining, and concierge services.',
-                service2Title: 'Brand Standards Audit',
-                service2Desc: 'Rigorous verification to ensure your global brand operational standards are met consistently across all locations.',
-                service3Title: 'CX Consulting',
-                service3Desc: 'Strategic advice led by Brendon Rudolph to turn audit data into actionable training and service improvements.',
+                aboutTitle: 'Decades of Unrivaled Insight',
+                aboutText1: 'Founded by Brendon Rudolph, RudiBudi Checkers has spent over 25 years strictly focused on the hospitality and travel industries. Unlike generalist research firms, we speak the language of luxury. We understand that in a 5-star environment, it is not enough to simply serve coffee; it is about the grace, timing, and emotional connection of the service.',
+                aboutText2: 'From boutique hideaways in Budapest to sprawling resorts in the Maldives, our evaluators are seasoned travelers who match your guest profile perfectly. We empower leadership teams with the granular data needed to refine operations and elevate the guest experience.',
 
-                // References
-                refTitle: 'Trusted Partners',
-                refSub: "We work with the world's most prestigious hospitality brands.",
-                ref1Text: '"Rudolph CX provided invaluable insights into our front-desk operations. Their detailed reporting helped us refine our guest welcome experience significantly."',
-                ref2Text: '"Brendon and his team understand the nuance of luxury. Their audits are thorough, fair, and incredibly useful for our general managers."',
+                serv1Title: 'Brand Compliance',
+                serv1Desc: "We rigorously test adherence to your brand's Standard Operating Procedures (SOPs). Ensure that your brand promise is kept consistent, whether in London, New York, or Budapest.",
+                serv2Title: 'Emotional Audits',
+                serv2Desc: 'Moving beyond functional checklists, we measure the "warmth" of engagement. Did the staff make eye contact? Did they anticipate needs? We quantify the unquantifiable.',
+                serv3Title: 'Competitive Benchmarking',
+                serv3Desc: 'See exactly how you stack up against your competitive set. We deploy evaluators to your rivals to provide a direct comparison of service levels and amenities.',
 
-                // Contact
-                contactTitle: "Ready to improve your score?",
-                contactSub: "Contact Brendon Rudolph today to discuss a custom mystery shopping program for your hotel or venue.",
-                emailBtn: 'Get in Touch'
+                portTitle: 'Selected Partnerships',
+                portSub: 'Budapest & International',
+                hotel1Desc: 'Comprehensive operational audits focusing on the "Lady in Red" guest relations program and high-touch concierge services.',
+                hotel2Desc: 'Strategic evaluations of the historic Adria Palace property, focusing on food & beverage standards and housekeeping efficiency.',
+
+                contactTitle: 'Elevate Your Standards',
+                contactText: "Contact RudiBudi Checkers for a confidential discussion about your property's mystery shopping needs.",
+                contactBtn: 'Contact Brendon'
             },
             hu: {
-                // Hero
-                heroBadge: 'Prémium Minőségbiztosítás',
-                heroTitle: 'A Vendéglátás Szintjének <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Emelése.</span>',
-                heroBio: 'Elit Próbavásárlás (Mystery Shopping) és Ügyfélélmény auditálás Brendon Rudolph vezetésével. Segítünk a luxusmárkáknak tökéletesíteni szolgáltatásaikat.',
-                ctaPrimary: 'Audit Kérése',
-                ctaSecondary: 'Ügyfeleink',
+                navAbout: 'Rólunk',
+                navServices: 'Szolgáltatások',
+                heroSubtitle: 'Globális Minőségbiztosítás',
+                heroTitle: 'A Luxus Vendéglátás <br> <i class="font-serif text-stone-600">Mércéje.</i>',
+                heroDesc: "Nem csak szabványokat mérünk, hanem érzelmeket is. A RudiBudi Checkers olyan adatokat szolgáltat, amelyek a vendégeket élethosszig tartó hívekké változtatják.",
+                ctaButton: 'Konzultáció Kérése',
                 
-                // Services
-                servicesTitle: 'Szolgáltatásaink',
-                service1Title: 'Próbavásárlás (Mystery Shopping)',
-                service1Desc: 'Be nem jelentett, részletes értékelések a vendégélményről, beleértve a bejelentkezést, az étkezést és a concierge szolgáltatásokat.',
-                service2Title: 'Márkaszabvány Audit',
-                service2Desc: 'Szigorú ellenőrzés annak biztosítására, hogy globális működési szabványai minden helyszínen következetesen teljesüljenek.',
-                service3Title: 'CX Tanácsadás',
-                service3Desc: 'Stratégiai tanácsadás Brendon Rudolph vezetésével, hogy az auditadatokat gyakorlati tréningekké és fejlesztésekké alakítsuk.',
+                aboutTitle: 'Évtizedes Szakmai Tapasztalat',
+                aboutText1: 'A Brendon Rudolph által alapított RudiBudi Checkers több mint 25 éve kizárólag a vendéglátó- és utazási iparra összpontosít. Az általános kutatócégekkel ellentétben mi beszéljük a luxus nyelvét. Értjük, hogy 5 csillagos környezetben a kávé felszolgálása önmagában nem elég; a kiszolgálás bája, időzítése és érzelmi kapcsolata a lényeg.',
+                aboutText2: 'A budapesti butikszállodáktól a maldív-szigeteki üdülőhelyekig ellenőreink tapasztalt utazók, akik tökéletesen illeszkednek az Ön vendégprofiljához. Olyan részletes adatokkal látjuk el a vezetőséget, amelyek szükségesek a működés finomhangolásához és a vendégélmény emeléséhez.',
 
-                // References
-                refTitle: 'Kiemelt Partnereink',
-                refSub: "A világ legelőkelőbb vendéglátó márkáival dolgozunk együtt.",
-                ref1Text: '"A Rudolph CX felbecsülhetetlen értékű betekintést nyújtott a recepciós működésünkbe. Jelentéseik segítségével jelentősen finomítottuk vendégfogadási folyamatainkat."',
-                ref2Text: '"Brendon és csapata érti a luxus árnyalatait. Auditjaik alaposak, igazságosak és hihetetlenül hasznosak az igazgatóink számára."',
+                serv1Title: 'Márka Megfelelőség',
+                serv1Desc: "Szigorúan teszteljük a márka szabványos működési eljárásainak (SOP) betartását. Biztosítsa, hogy márk ígérete következetes maradjon, legyen szó Londonról, New Yorkról vagy Budapestről.",
+                serv2Title: 'Érzelmi Auditok',
+                serv2Desc: 'A funkcionális ellenőrző listákon túl mérjük az elköteleződés "melegségét". Felvette-e a szemkontaktust a személyzet? Előre látták-e az igényeket? Mi számszerűsítjük a számszerűsíthetetlent.',
+                serv3Title: 'Versenytárs Elemzés',
+                serv3Desc: 'Lássa tisztán, hogyan teljesít a versenytársakkal szemben. Értékelőket küldünk riválisaihoz, hogy közvetlen összehasonlítást nyújtsunk a szolgáltatási szintekről.',
 
-                // Contact
-                contactTitle: "Készen áll a pontszám javítására?",
-                contactSub: "Lépjen kapcsolatba Brendon Rudolph-fal még ma, és egyeztessünk egy személyre szabott próbavásárlási programról.",
-                emailBtn: 'Írjon nekünk'
+                portTitle: 'Kiemelt Partnerek',
+                portSub: 'Budapest és Nemzetközi',
+                hotel1Desc: 'Átfogó működési auditok, különös tekintettel a "Lady in Red" vendégkapcsolati programra és a magas szintű concierge szolgáltatásokra.',
+                hotel2Desc: 'A történelmi Adria Palota stratégiai értékelése, fókuszban az étel- és italszolgáltatási szabványokkal és a housekeeping hatékonyságával.',
+
+                contactTitle: 'Emelje Szabványait',
+                contactText: "Lépjen kapcsolatba a RudiBudi Checkers-szel egy bizalmas megbeszélésért szállodája próbavásárlási igényeiről.",
+                contactBtn: 'Kapcsolatfelvétel'
             }
         };
 
-        // 2. State & Elements
         let currentLang = 'en';
         const toggleBtn = document.getElementById('lang-toggle');
         const langText = document.getElementById('current-lang-text');
         
-        // 3. Update Function
         function updateContent(lang) {
             const elements = document.querySelectorAll('[data-i18n]');
-            
             elements.forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang][key]) {
-                    // Check if translation contains HTML (for gradients etc)
                     if (translations[lang][key].includes('<')) {
                         el.innerHTML = translations[lang][key];
                     } else {
@@ -291,23 +288,15 @@
                     }
                 }
             });
-
-            // Update Toggle Button Text
             langText.textContent = lang === 'en' ? 'EN' : 'HU';
-            
-            // Re-render icons if needed (safety)
-            lucide.createIcons();
         }
 
-        // 4. Event Listener
         toggleBtn.addEventListener('click', () => {
             currentLang = currentLang === 'en' ? 'hu' : 'en';
             updateContent(currentLang);
         });
 
-        // 5. Initialize Icons
         lucide.createIcons();
-
     </script>
 </body>
 </html>
