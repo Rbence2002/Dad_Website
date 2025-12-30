@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Web Developer Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        zinc: {
+                            850: '#1f1f22', // Custom lighter background for cards
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom tweaks for ultra-minimalism */
+        body {
+            font-feature-settings: "cv11", "ss01";
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <i data-lucide="code-2" class="w-6 h-6 text-indigo-500"></i>
+                <span class="hidden sm:inline">AlexDev</span>
+            </a>
+            
+            <div class="flex items-center gap-6">
+                <button id="lang-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-zinc-700 hover:border-zinc-500 transition-colors text-sm font-medium">
+                    <i data-lucide="globe" class="w-4 h-4"></i>
+                    <span id="current-lang-text">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-16 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl -z-10"></div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 max-w-4xl leading-tight" data-i18n="heroTitle">
+                Crafting Digital <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Experiences.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed" data-i18n="heroBio">
+                Senior Web Developer specializing in building accessible, high-performance, and minimalist web applications that scale.
+            </p>
+            <div class="flex gap-4">
+                <a href="#contact" class="px-8 py-3 bg-white text-zinc-900 rounded-lg font-semibold hover:bg-zinc-200 transition-colors" data-i18n="ctaPrimary">
+                    Get in Touch
+                </a>
+                <a href="#services" class="px-8 py-3 border border-zinc-700 text-white rounded-lg font-semibold hover:bg-zinc-900 transition-colors" data-i18n="ctaSecondary">
+                    View Services
+                </a>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-zinc-900/50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4" data-i18n="servicesTitle">Expertise</h2>
+                    <div class="h-1 w-20 bg-indigo-500 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
+                            <i data-lucide="layout" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="service1Title">Frontend Development</h3>
+                        <p class="text-zinc-400" data-i18n="service1Desc">
+                            Building responsive, pixel-perfect user interfaces using modern frameworks like React, Vue, and Tailwind CSS.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
+                            <i data-lucide="server" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="service2Title">Backend Architecture</h3>
+                        <p class="text-zinc-400" data-i18n="service2Desc">
+                            Designing robust APIs and database structures that ensure security, speed, and reliability.
+                        </p>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-all duration-300 group">
+                        <div class="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 transition-colors">
+                            <i data-lucide="zap" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="service3Title">Performance Optimization</h3>
+                        <p class="text-zinc-400" data-i18n="service3Desc">
+                            Auditing and refactoring existing codebases to improve load times, SEO ranking, and Core Web Vitals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="py-24">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-white mb-4" data-i18n="refTitle">Client Words</h2>
+                    <div class="h-1 w-20 bg-indigo-500 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative p-8 border-l-4 border-zinc-700 bg-zinc-900/30">
+                        <i data-lucide="quote" class="absolute top-6 right-6 text-zinc-800 w-10 h-10"></i>
+                        <p class="text-lg text-zinc-300 italic mb-6" data-i18n="ref1Text">
+                            "The attention to detail and code quality was outstanding. Our platform is faster than ever and our users love the new design."
+                        </p>
+                        <div>
+                            <p class="font-bold text-white">Sarah Jenkins</p>
+                            <p class="text-sm text-zinc-500">CTO, TechFlow</p>
+                        </div>
+                    </div>
+
+                    <div class="relative p-8 border-l-4 border-zinc-700 bg-zinc-900/30">
+                        <i data-lucide="quote" class="absolute top-6 right-6 text-zinc-800 w-10 h-10"></i>
+                        <p class="text-lg text-zinc-300 italic mb-6" data-i18n="ref2Text">
+                            "A true professional who understands both the technical and business requirements. Delivered ahead of schedule."
+                        </p>
+                        <div>
+                            <p class="font-bold text-white">Nagy Gábor</p>
+                            <p class="text-sm text-zinc-500">CEO, FutureSystems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 bg-zinc-900 border-t border-zinc-800">
+            <div class="max-w-3xl mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-i18n="contactTitle">Let's work together</h2>
+                <p class="text-zinc-400 mb-10 text-lg" data-i18n="contactSub">
+                    Have a project in mind? Send me an email and let's discuss how we can bring your vision to life.
+                </p>
+                
+                <div class="inline-flex flex-col items-center">
+                    <a href="mailto:hello@alexdev.com" class="group flex items-center gap-3 bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:scale-105 shadow-lg shadow-indigo-500/20">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        <span data-i18n="emailBtn">Email Me</span>
+                    </a>
+                    <span class="mt-4 text-zinc-500 text-sm">hello@alexdev.com</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="py-8 bg-zinc-950 border-t border-zinc-800 text-center">
+            <p class="text-zinc-600 text-sm">© 2024 AlexDev. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script>
+        // 1. Translation Data
+        const translations = {
+            en: {
+                // Hero
+                heroTitle: 'Crafting Digital <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Experiences.</span>',
+                heroBio: 'Senior Web Developer specializing in building accessible, high-performance, and minimalist web applications that scale.',
+                ctaPrimary: 'Get in Touch',
+                ctaSecondary: 'View Services',
+                
+                // Services
+                servicesTitle: 'Expertise',
+                service1Title: 'Frontend Development',
+                service1Desc: 'Building responsive, pixel-perfect user interfaces using modern frameworks like React, Vue, and Tailwind CSS.',
+                service2Title: 'Backend Architecture',
+                service2Desc: 'Designing robust APIs and database structures that ensure security, speed, and reliability.',
+                service3Title: 'Performance Optimization',
+                service3Desc: 'Auditing and refactoring existing codebases to improve load times, SEO ranking, and Core Web Vitals.',
+
+                // References
+                refTitle: 'Client Words',
+                ref1Text: '"The attention to detail and code quality was outstanding. Our platform is faster than ever and our users love the new design."',
+                ref2Text: '"A true professional who understands both the technical and business requirements. Delivered ahead of schedule."',
+
+                // Contact
+                contactTitle: "Let's work together",
+                contactSub: "Have a project in mind? Send me an email and let's discuss how we can bring your vision to life.",
+                emailBtn: 'Email Me'
+            },
+            hu: {
+                // Hero
+                heroTitle: 'Digitális Élményeket <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Építek.</span>',
+                heroBio: 'Senior webfejlesztő, hozzáférhető, nagy teljesítményű és minimalista webes alkalmazások építésére szakosodva.',
+                ctaPrimary: 'Kapcsolat',
+                ctaSecondary: 'Szolgáltatások',
+                
+                // Services
+                servicesTitle: 'Szakértelem',
+                service1Title: 'Frontend Fejlesztés',
+                service1Desc: 'Reszponzív, pixelpontos felhasználói felületek készítése modern keretrendszerekkel, mint a React, Vue és Tailwind CSS.',
+                service2Title: 'Backend Architektúra',
+                service2Desc: 'Robusztus API-k és adatbázis-struktúrák tervezése, amelyek garantálják a biztonságot, sebességet és megbízhatóságot.',
+                service3Title: 'Teljesítmény Optimalizálás',
+                service3Desc: 'Meglévő kódbázisok auditálása és refaktorálása a betöltési idők, a SEO rangsorolás és a Core Web Vitals javítása érdekében.',
+
+                // References
+                refTitle: 'Ügyfelek Véleménye',
+                ref1Text: '"A részletekre való odafigyelés és a kód minősége kiemelkedő volt. A platformunk gyorsabb, mint valaha, és a felhasználók imádják az új dizájnt."',
+                ref2Text: '"Igazi profi, aki érti mind a technikai, mind az üzleti követelményeket. A határidő előtt szállította a projektet."',
+
+                // Contact
+                contactTitle: "Dolgozzunk együtt",
+                contactSub: "Van egy projektötlete? Küldjön e-mailt, és beszéljük meg, hogyan valósíthatjuk meg elképzeléseit.",
+                emailBtn: 'Írj nekem'
+            }
+        };
+
+        // 2. State & Elements
+        let currentLang = 'en';
+        const toggleBtn = document.getElementById('lang-toggle');
+        const langText = document.getElementById('current-lang-text');
+        
+        // 3. Update Function
+        function updateContent(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    // Check if the translation contains HTML tags (for the Hero title gradient)
+                    if (translations[lang][key].includes('<')) {
+                        el.innerHTML = translations[lang][key];
+                    } else {
+                        el.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            // Update Toggle Button Text
+            langText.textContent = lang === 'en' ? 'EN' : 'HU';
+            
+            // Re-render icons if any were overwritten (safety check, though not strictly needed for this content structure)
+            lucide.createIcons();
+        }
+
+        // 4. Event Listener
+        toggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'hu' : 'en';
+            updateContent(currentLang);
+        });
+
+        // 5. Initialize Icons
+        lucide.createIcons();
+
+    </script>
+</body>
+</html>
