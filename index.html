@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noble Audits provides discreet, luxury hospitality auditing in Budapest and Hungary. Decades of British precision for hotels, fine dining, and spas.">
     <title>Noble Audits | British Hospitality Standards</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=2071&auto=format&fit=crop">
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,11 +53,22 @@
             background-color: #0f172a;
             color: #c5a059;
         }
+        /* 3.3 Accessibility: Visible Focus States */
+        a:focus-visible, button:focus-visible, summary:focus-visible {
+            outline: 2px solid #c5a059;
+            outline-offset: 2px;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
     </style>
 </head>
 <body class="bg-stone-50 text-navy-900 font-sans antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <a href="#" class="flex flex-col group">
                 <div class="flex items-center gap-2">
@@ -68,7 +82,7 @@
                 <a href="#about" class="hidden md:block text-xs font-bold uppercase tracking-widest text-navy-800 hover:text-gold-600 transition-colors" data-i18n="navAbout">Heritage</a>
                 <a href="#services" class="hidden md:block text-xs font-bold uppercase tracking-widest text-navy-800 hover:text-gold-600 transition-colors" data-i18n="navServices">Services</a>
                 
-                <button id="lang-toggle" class="flex items-center gap-2 px-3 py-1.5 border border-stone-300 rounded-sm hover:border-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold uppercase tracking-widest">
+                <button id="lang-toggle" aria-label="Toggle Language" class="flex items-center gap-2 px-3 py-1.5 border border-stone-300 rounded-sm hover:border-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold uppercase tracking-widest">
                     <span id="current-lang-text">EN</span>
                 </button>
             </div>
@@ -95,7 +109,7 @@
                 </div>
                 
                 <div class="order-1 lg:order-2 relative h-[500px] w-full overflow-hidden shadow-2xl border-4 border-white">
-                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=2071&auto=format&fit=crop" alt="Luxury Hotel Lobby Detail" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]">
+                    <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=2071&auto=format&fit=crop" alt="Luxury Hotel Lobby Detail showcasing marble and gold accents" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-[2s]">
                     <div class="absolute bottom-6 right-6 bg-white/95 backdrop-blur p-6 max-w-xs shadow-sm border-l-4 border-gold-500">
                         <p class="font-serif text-xl italic text-navy-900">"True luxury is the absence of friction."</p>
                         <p class="text-[10px] uppercase tracking-widest mt-2 text-gold-600 font-bold">- Brendon Rudolph, Founder</p>
@@ -120,6 +134,30 @@
                 </div>
                 <div class="mt-10 flex justify-center gap-4">
                     <span class="font-serif text-4xl text-gold-500 italic opacity-50">B. Rudolph</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-stone-100 border-b border-stone-200">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="bg-white p-10 md:p-14 shadow-lg border-t-4 border-navy-900 relative">
+                    <i data-lucide="quote" class="absolute top-10 right-10 w-12 h-12 text-stone-100 fill-current"></i>
+                    <h3 class="font-serif text-2xl text-navy-950 mb-6" data-i18n="letterTitle">A Letter from the Founder</h3>
+                    <div class="prose prose-stone text-navy-800 font-light leading-relaxed">
+                        <p class="mb-4" data-i18n="letterP1">
+                            To our prospective partners,
+                        </p>
+                        <p class="mb-4" data-i18n="letterP2">
+                            True hospitality is not merely the presence of luxury; it is the absence of friction. For three decades, I have observed that the difference between a good hotel and a legend lies in the consistency of its details.
+                        </p>
+                        <p class="mb-6" data-i18n="letterP3">
+                            We do not seek faults for the sake of criticism. We seek the truth to empower your excellence. We bring the discipline of the old world to the demands of the new.
+                        </p>
+                        <p data-i18n="letterSign">
+                            Yours faithfully,
+                        </p>
+                        <div class="mt-4 font-serif text-xl text-navy-900 italic">Brendon Rudolph</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -204,6 +242,82 @@
             </div>
         </section>
 
+        <section class="py-20 bg-white border-b border-stone-200">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-10 bg-stone-50 border border-stone-200 p-8 rounded-sm">
+                    <div class="flex-shrink-0 bg-navy-900 text-white p-6 rounded-sm shadow-md">
+                        <i data-lucide="file-text" class="w-12 h-12"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-serif text-2xl text-navy-950 mb-3" data-i18n="sampleTitle">Sample Audit Report (Redacted)</h3>
+                        <p class="text-navy-800/70 mb-4 leading-relaxed" data-i18n="sampleDesc">
+                            For serious inquiries, we offer a viewing of a 6-page professional audit sample. This document (with property name fully redacted) demonstrates our rigorous scoring framework, detailed narrative observations, and actionable recommendations.
+                        </p>
+                        <div class="flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-widest">
+                            <i data-lucide="lock" class="w-3 h-3"></i>
+                            <span data-i18n="sampleStatus">Available upon request</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#contact" class="inline-block border border-navy-900 text-navy-900 px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-navy-900 hover:text-white transition-colors" data-i18n="sampleBtn">
+                            Request Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-stone-50 border-b border-stone-200">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-3xl text-navy-950 mb-4" data-i18n="faqTitle">Executive FAQ</h2>
+                    <div class="h-px w-20 bg-gold-500 mx-auto"></div>
+                </div>
+                
+                <div class="space-y-4">
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ1">Will staff know they are being audited?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA1">
+                            Our auditors operate with complete discretion. We book, dine, and interact exactly as a high-net-worth guest would. Your team will not know they are being evaluated until the report is delivered.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ2">How disruptive is the full-day audit?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA2">
+                            There is zero operational disruption. We require no assistance from your team on-site. We are invisible and experience the hotel exactly as a guest would.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ3">Do you benchmark against brand or independent standards?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA3">
+                            We adapt to your specific Brand Standards (e.g., LQA, Forbes) or, if requested, apply our own 'Noble Standard'—an amalgamation of the finest British and international protocols.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ4">Can findings be shared with ownership only?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA4">
+                            Yes. Findings are shared strictly with the authorized stakeholder (Owner, GM, or Asset Manager). We do not publish rankings, public reviews, or share data with third parties.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <section class="py-24 px-6 bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-16 border-l-4 border-gold-600 pl-6 flex flex-col md:flex-row justify-between items-end">
@@ -219,7 +333,8 @@
                         <div class="relative h-64 overflow-hidden mb-6 border border-stone-100 shadow-sm">
                             <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1528574744933-f111832043e0?q=80&w=1000&auto=format&fit=crop" 
-                                 alt="Budapest Marriott Hotel on Danube" 
+                                 alt="Budapest Marriott Hotel exterior view on the Danube bank" 
+                                 loading="lazy"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
                                 <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Danube Bank</span>
@@ -235,7 +350,8 @@
                         <div class="relative h-64 overflow-hidden mb-6 border border-stone-100 shadow-sm">
                             <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?q=80&w=1000&auto=format&fit=crop" 
-                                 alt="Gundel Restaurant Fine Dining Interior" 
+                                 alt="Elegant fine dining interior of Gundel Restaurant" 
+                                 loading="lazy"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
                                 <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Fine Dining</span>
@@ -251,7 +367,8 @@
                         <div class="relative h-64 overflow-hidden mb-6 border border-stone-100 shadow-sm">
                             <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1565426873118-a17ed65d7429?q=80&w=1000&auto=format&fit=crop" 
-                                 alt="View from InterContinental Budapest" 
+                                 alt="View of Chain Bridge from InterContinental Budapest luxury hotel" 
+                                 loading="lazy"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
                                 <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Luxury Hotel</span>
@@ -267,7 +384,8 @@
                         <div class="relative h-64 overflow-hidden mb-6 border border-stone-100 shadow-sm">
                             <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000&auto=format&fit=crop" 
-                                 alt="Kempinski Hotel Corvinus Aesthetic" 
+                                 alt="Modern luxury architecture of Kempinski Hotel Corvinus" 
+                                 loading="lazy"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
                                 <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Since 2010</span>
@@ -283,7 +401,8 @@
                         <div class="relative h-64 overflow-hidden mb-6 border border-stone-100 shadow-sm">
                             <div class="absolute inset-0 bg-navy-900/10 group-hover:bg-transparent transition-colors z-10"></div>
                             <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1000&auto=format&fit=crop" 
-                                 alt="Le Méridien Budapest Building" 
+                                 alt="Historic Adria Palace building housing Le Méridien Budapest" 
+                                 loading="lazy"
                                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <div class="absolute top-4 right-4 bg-white/95 backdrop-blur px-3 py-1 z-20">
                                 <span class="text-[10px] font-bold tracking-widest uppercase text-navy-900">Historic Audit</span>
@@ -313,7 +432,7 @@
                 
                 <a href="mailto:brendonrudolph@icloud.com" class="inline-flex items-center gap-3 border border-stone-700 bg-navy-900 px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-gold-600 hover:text-white hover:border-gold-600 transition-all duration-300">
                     <i data-lucide="mail" class="w-4 h-4"></i>
-                    <span data-i18n="contactBtn">Contact Mr Rudolph</span>
+                    <span data-i18n="contactBtn">Schedule a Private Consultation</span>
                 </a>
 
                 <div class="mt-8 flex flex-col items-center gap-1">
@@ -345,6 +464,13 @@
                 aboutText1: 'With roots in the rigorous etiquette of London\'s grand hotels, founder Brendon Rudolph established Noble Audits in Hungary, in 2001, to bring a higher caliber of evaluation to the Hungarian market. We do not simply check boxes; we uphold the traditions of impeccable service.',
                 aboutText2: 'Based in Budapest but operating with a British mindset, our team possesses the refined eye required to spot the smallest deviations in protocol. Whether serving royalty or rock stars, your staff must perform flawlessly. We ensure they do.',
 
+                // Founder Letter
+                letterTitle: 'A Letter from the Founder',
+                letterP1: 'To our prospective partners,',
+                letterP2: 'True hospitality is not merely the presence of luxury; it is the absence of friction. For three decades, I have observed that the difference between a good hotel and a legend lies in the consistency of its details.',
+                letterP3: 'We do not seek faults for the sake of criticism. We seek the truth to empower your excellence. We bring the discipline of the old world to the demands of the new.',
+                letterSign: 'Yours faithfully,',
+
                 servHeading: 'Core Audit Solutions',
                 servSub: 'Precision tailored to your operational needs and International Hotel Standards',
                 
@@ -370,6 +496,23 @@
                 add3Title: 'Late Night Arrival',
                 add3Desc: 'Auditing the energy and standards of the night shift team.',
 
+                // Sample Report
+                sampleTitle: 'Sample Audit Report (Redacted)',
+                sampleDesc: 'For serious inquiries, we offer a viewing of a 6-page professional audit sample. This document (with property name fully redacted) demonstrates our rigorous scoring framework, detailed narrative observations, and actionable recommendations.',
+                sampleStatus: 'Available upon request',
+                sampleBtn: 'Request Access',
+
+                // FAQ
+                faqTitle: 'Executive FAQ',
+                faqQ1: 'Will staff know they are being audited?',
+                faqA1: 'Our auditors operate with complete discretion. We book, dine, and interact exactly as a high-net-worth guest would. Your team will not know they are being evaluated until the report is delivered.',
+                faqQ2: 'How disruptive is the full-day audit?',
+                faqA2: 'There is zero operational disruption. We require no assistance from your team on-site. We are invisible and experience the hotel exactly as a guest would.',
+                faqQ3: 'Do you benchmark against brand or independent standards?',
+                faqA3: 'We adapt to your specific Brand Standards (e.g., LQA, Forbes) or, if requested, apply our own "Noble Standard"—an amalgamation of the finest British and international protocols.',
+                faqQ4: 'Can findings be shared with ownership only?',
+                faqA4: 'Yes. Findings are shared strictly with the authorized stakeholder (Owner, GM, or Asset Manager). We do not publish rankings, public reviews, or share data with third parties.',
+
                 portTitle: 'Selected Partnerships',
                 portSub: 'Curated Excellence in Budapest',
                 hotel1Desc: 'Ensuring the rigorous global standards of Marriott are met with the specific warmth of Hungarian hospitality on the Danube.',
@@ -381,7 +524,7 @@
                 contactPre: 'Discreet & Professional',
                 contactTitle: 'Elevate Your Standards',
                 contactText: "Contact Noble Audits for a confidential discussion about your property's specific requirements.",
-                contactBtn: 'Contact Mr Rudolph'
+                contactBtn: 'Schedule a Private Consultation'
             },
             hu: {
                 navAbout: 'Örökség',
@@ -394,6 +537,13 @@
                 aboutTitle: 'Brit Szabványok Öröksége',
                 aboutText1: 'Brendon Rudolph alapító a londoni nagyszállodák szigorú etikettjéből merítve 2001-ben, Magyarországon hozta létre a Noble Audits-ot, hogy a magyar piacon magasabb szintű értékelést nyújtson. Mi nem csupán rubrikákat pipálunk ki; a kifogástalan kiszolgálás hagyományait őrizzük.',
                 aboutText2: 'Budapesti székhellyel, de brit mentalitással működő csapatunk rendelkezik azzal a kifinomult szemlélettel, amely szükséges a legkisebb protokolláris eltérések észleléséhez. Legyen szó királyi fenségekről vagy rocksztárokról, személyzetének hibátlanul kell teljesítenie.',
+
+                // Founder Letter
+                letterTitle: 'Levél az Alapítótól',
+                letterP1: 'Leendő partnereinknek,',
+                letterP2: 'Az igazi vendéglátás nem csupán a luxus jelenléte; hanem a súrlódások hiánya. Három évtized alatt megfigyeltem, hogy a különbség egy jó szálloda és egy legenda között a részletek következetességében rejlik.',
+                letterP3: 'Nem a hibákat keressük a kritika kedvéért. Az igazságot keressük, hogy elősegítsük az Önök kiválóságát. A régi világ fegyelmét hozzuk el az új kor követelményeihez.',
+                letterSign: 'Tisztelettel,',
 
                 servHeading: 'Kiemelt Audit Megoldások',
                 servSub: 'Az Ön működési igényeire és a Nemzetközi Szállodai Szabványokra szabva',
@@ -420,6 +570,23 @@
                 add3Title: 'Késő Éjszakai Érkezés',
                 add3Desc: 'Az éjszakai műszak energiaszintjének és szabványainak auditálása.',
 
+                // Sample Report
+                sampleTitle: 'Minta Audit Jelentés (Redigált)',
+                sampleDesc: 'Komoly érdeklődők számára lehetőséget biztosítunk egy 6 oldalas szakmai audit minta megtekintésére. Ez a dokumentum (teljesen kitakart ingatlannévvel) bemutatja szigorú pontozási rendszerünket, részletes narratív megfigyeléseinket és gyakorlati javaslatainkat.',
+                sampleStatus: 'Kérésre elérhető',
+                sampleBtn: 'Hozzáférés Kérése',
+
+                // FAQ
+                faqTitle: 'Gyakori Kérdések Vezetőknek',
+                faqQ1: 'Tudni fogja a személyzet, hogy auditálják őket?',
+                faqA1: 'Auditoraink teljes diszkrécióval dolgoznak. Úgy foglalunk, étkezünk és viselkedünk, mint egy kiemelt vendég. Csapata nem fogja tudni, hogy értékelés alatt állnak, amíg a jelentést kézhez nem kapják.',
+                faqQ2: 'Mennyire zavarja a működést az egész napos audit?',
+                faqA2: 'Zéró működési zavart okozunk. Nem kérünk segítséget a csapatától a helyszínen. Láthatatlanok vagyunk, és pontosan úgy tapasztaljuk meg a szállodát, mint egy vendég.',
+                faqQ3: 'Márka vagy független szabványok alapján mérnek?',
+                faqA3: 'Alkalmazkodunk az Önök specifikus márkaelőírásaihoz (pl. LQA, Forbes), vagy kérésre a saját "Noble Standard"-ünket alkalmazzuk — amely a legkiválóbb brit és nemzetközi protokollok ötvözete.',
+                faqQ4: 'Megoszthatók az eredmények kizárólag a tulajdonosi körrel?',
+                faqA4: 'Igen. Az eredményeket szigorúan csak a felhatalmazott érintett féllel (Tulajdonos, GM vagy Asset Manager) osztjuk meg. Nem publikálunk rangsorokat, nyilvános értékeléseket, és nem osztunk meg adatokat harmadik féllel.',
+
                 portTitle: 'Kiemelt Partnerek',
                 portSub: 'Kiválóság Budapesten',
                 hotel1Desc: 'A Marriott szigorú globális szabványainak betartásának ellenőrzése, ötvözve a magyar vendégszeretet melegségével a Duna-parton.',
@@ -431,7 +598,7 @@
                 contactPre: 'Diszkrét és Professzionális',
                 contactTitle: 'Emelje Szabványait',
                 contactText: "Lépjen kapcsolatba a Noble Audits-szal egy bizalmas megbeszélésért az ingatlana specifikus igényeiről.",
-                contactBtn: 'Lépjen kapcsolatba Rudolph úrral'
+                contactBtn: 'Privát Konzultáció Egyeztetése'
             }
         };
 
