@@ -53,7 +53,6 @@
             background-color: #0f172a;
             color: #c5a059;
         }
-        /* 3.3 Accessibility: Visible Focus States */
         a:focus-visible, button:focus-visible, summary:focus-visible {
             outline: 2px solid #c5a059;
             outline-offset: 2px;
@@ -78,10 +77,14 @@
                 <span class="text-[10px] uppercase tracking-[0.2em] text-navy-800 font-bold pl-8">Budapest &bull; Hungary</span>
             </a>
             
-            <div class="flex items-center gap-8">
+            <div class="flex items-center gap-6 md:gap-8">
                 <a href="#about" class="hidden md:block text-xs font-bold uppercase tracking-widest text-navy-800 hover:text-gold-600 transition-colors" data-i18n="navAbout">Heritage</a>
                 <a href="#services" class="hidden md:block text-xs font-bold uppercase tracking-widest text-navy-800 hover:text-gold-600 transition-colors" data-i18n="navServices">Services</a>
                 
+                <a href="#contact" class="hidden md:block px-5 py-2 border border-navy-900 text-navy-900 text-xs font-bold uppercase tracking-widest hover:bg-navy-900 hover:text-white transition-colors rounded-sm" data-i18n="navContact">
+                    Contact
+                </a>
+
                 <button id="lang-toggle" aria-label="Toggle Language" class="flex items-center gap-2 px-3 py-1.5 border border-stone-300 rounded-sm hover:border-navy-900 hover:bg-navy-900 hover:text-white transition-all text-xs font-bold uppercase tracking-widest">
                     <span id="current-lang-text">EN</span>
                 </button>
@@ -118,207 +121,7 @@
             </div>
         </section>
 
-        <section id="about" class="py-24 bg-white border-b border-stone-200">
-            <div class="max-w-4xl mx-auto px-6 text-center">
-                <div class="flex justify-center mb-6">
-                    <div class="w-px h-16 bg-gold-500"></div>
-                </div>
-                <h2 class="font-serif text-3xl md:text-4xl text-navy-950 mb-8" data-i18n="aboutTitle">A Legacy of British Standards</h2>
-                <div class="prose prose-lg mx-auto text-navy-800/80">
-                    <p class="mb-6 leading-relaxed font-light" data-i18n="aboutText1">
-                        With roots in the rigorous etiquette of London's grand hotels, founder Brendon Rudolph established Noble Audits in Hungary, in 2001, to bring a higher caliber of evaluation to the Hungarian market. We do not simply check boxes; we uphold the traditions of impeccable service.
-                    </p>
-                    <p class="leading-relaxed font-light" data-i18n="aboutText2">
-                        Based in Budapest but operating with a British mindset, our team possesses the refined eye required to spot the smallest deviations in protocol. Whether serving royalty or rock stars, your staff must perform flawlessly. We ensure they do.
-                    </p>
-                </div>
-                <div class="mt-10 flex justify-center gap-4">
-                    <span class="font-serif text-4xl text-gold-500 italic opacity-50">B. Rudolph</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-20 bg-stone-100 border-b border-stone-200">
-            <div class="max-w-3xl mx-auto px-6">
-                <div class="bg-white p-10 md:p-14 shadow-lg border-t-4 border-navy-900 relative">
-                    <i data-lucide="quote" class="absolute top-10 right-10 w-12 h-12 text-stone-100 fill-current"></i>
-                    <h3 class="font-serif text-2xl text-navy-950 mb-6" data-i18n="letterTitle">A Letter from the Founder</h3>
-                    <div class="prose prose-stone text-navy-800 font-light leading-relaxed">
-                        <p class="mb-4" data-i18n="letterP1">
-                            To our prospective partners,
-                        </p>
-                        <p class="mb-4" data-i18n="letterP2">
-                            True hospitality is not merely the presence of luxury; it is the absence of friction. For three decades, I have observed that the difference between a good hotel and a legend lies in the consistency of its details.
-                        </p>
-                        <p class="mb-6" data-i18n="letterP3">
-                            We do not seek faults for the sake of criticism. We seek the truth to empower your excellence. We bring the discipline of the old world to the demands of the new.
-                        </p>
-                        <p data-i18n="letterSign">
-                            Yours faithfully,
-                        </p>
-                        <div class="mt-4 font-serif text-xl text-navy-900 italic">Brendon Rudolph</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="py-24 bg-stone-50 border-b border-stone-200">
-            <div class="max-w-7xl mx-auto px-6">
-                
-                <div class="text-center mb-16">
-                    <h2 class="font-serif text-4xl text-navy-950 mb-4" data-i18n="servHeading">Core Audit Solutions</h2>
-                    <p class="text-navy-800/60 uppercase tracking-widest text-xs" data-i18n="servSub">Precision tailored to your operational needs and International Hotel Standards</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-                    
-                    <div class="relative bg-white border border-stone-200 p-10 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy-900 to-navy-800 group-hover:from-gold-500 group-hover:to-gold-400 transition-all"></div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="bg-navy-50 p-3 rounded-full text-navy-900 group-hover:bg-gold-50 group-hover:text-gold-600 transition-colors">
-                                <i data-lucide="zap" class="w-8 h-8"></i>
-                            </div>
-                            <span class="bg-navy-900 text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm" data-i18n="rushBadge">Most Popular</span>
-                        </div>
-                        <h3 class="font-serif text-3xl text-navy-950 mb-4" data-i18n="rushTitle">The Two-Hour Rush Audit</h3>
-                        <p class="text-navy-800/70 mb-8 leading-relaxed" data-i18n="rushDesc">
-                            A rapid, high-impact assessment designed for immediate feedback. Our auditor validates critical touchpoints—Arrival, Front Desk efficiency, Bar Service and 3-Room Category Assessment — within a concentrated window. Perfect for spot-checks during peak hours.
-                        </p>
-                        <ul class="space-y-3 mb-8 text-sm text-navy-800">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat1">Immediate Report Option – Sit Down or Walk Through</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat2">Focus on First Impressions and Imperfections</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat3">Cost-effective Snapshot</span></li>
-                        </ul>
-                    </div>
-
-                    <div class="relative bg-navy-900 text-white border border-navy-800 p-10 shadow-2xl hover:-translate-y-1 transition-all">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-gold-500"></div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="bg-white/10 p-3 rounded-full text-gold-400">
-                                <i data-lucide="clock" class="w-8 h-8"></i>
-                            </div>
-                            <span class="border border-gold-500 text-gold-400 text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm" data-i18n="fullBadge">The Gold Standard</span>
-                        </div>
-                        <h3 class="font-serif text-3xl text-white mb-4" data-i18n="fullTitle">The Comprehensive Full-Day Audit</h3>
-                        <p class="text-stone-300 mb-8 leading-relaxed" data-i18n="fullDesc">
-                            The definitive deep-dive. An auditor immerses themselves for 24 hours, evaluating over 300 SOP criteria across Housekeeping, F&B, Concierge, and Spa. This is the forensic analysis required for 5-star accreditation.
-                        </p>
-                        <ul class="space-y-3 mb-8 text-sm text-stone-200">
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat1">Full Guest Journey Mapping</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat2">Overnight Stay & Breakfast</span></li>
-                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat3">Detailed Strategic Report</span></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="bg-white border border-stone-200 p-8 md:p-12">
-                    <h4 class="font-serif text-2xl text-navy-950 mb-8 text-center" data-i18n="addonTitle">Bespoke Add-ons & Specifics</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="flex gap-4">
-                            <i data-lucide="wine" class="w-6 h-6 text-gold-600 shrink-0"></i>
-                            <div>
-                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add1Title">Sommelier Test</h5>
-                                <p class="text-sm text-navy-800/70" data-i18n="add1Desc">Testing wine knowledge and upselling skills in your fine dining venues.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <i data-lucide="phone-call" class="w-6 h-6 text-gold-600 shrink-0"></i>
-                            <div>
-                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add2Title">The Impossible Request</h5>
-                                <p class="text-sm text-navy-800/70" data-i18n="add2Desc">Challenging your Concierge with difficult demands to test resourcefulness.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <i data-lucide="moon" class="w-6 h-6 text-gold-600 shrink-0"></i>
-                            <div>
-                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add3Title">Late Night Arrival</h5>
-                                <p class="text-sm text-navy-800/70" data-i18n="add3Desc">Auditing the energy and standards of the night shift team.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="py-20 bg-white border-b border-stone-200">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-10 bg-stone-50 border border-stone-200 p-8 rounded-sm">
-                    <div class="flex-shrink-0 bg-navy-900 text-white p-6 rounded-sm shadow-md">
-                        <i data-lucide="file-text" class="w-12 h-12"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h3 class="font-serif text-2xl text-navy-950 mb-3" data-i18n="sampleTitle">Sample Audit Report (Redacted)</h3>
-                        <p class="text-navy-800/70 mb-4 leading-relaxed" data-i18n="sampleDesc">
-                            For serious inquiries, we offer a viewing of a 6-page professional audit sample. This document (with property name fully redacted) demonstrates our rigorous scoring framework, detailed narrative observations, and actionable recommendations.
-                        </p>
-                        <div class="flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-widest">
-                            <i data-lucide="lock" class="w-3 h-3"></i>
-                            <span data-i18n="sampleStatus">Available upon request</span>
-                        </div>
-                    </div>
-                    <div>
-                        <a href="#contact" class="inline-block border border-navy-900 text-navy-900 px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-navy-900 hover:text-white transition-colors" data-i18n="sampleBtn">
-                            Request Access
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 bg-stone-50 border-b border-stone-200">
-            <div class="max-w-3xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="font-serif text-3xl text-navy-950 mb-4" data-i18n="faqTitle">Executive FAQ</h2>
-                    <div class="h-px w-20 bg-gold-500 mx-auto"></div>
-                </div>
-                
-                <div class="space-y-4">
-                    <details class="group bg-white border border-stone-200 overflow-hidden">
-                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
-                            <span data-i18n="faqQ1">Will staff know they are being audited?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA1">
-                            Our auditors operate with complete discretion. We book, dine, and interact exactly as a high-net-worth guest would. Your team will not know they are being evaluated until the report is delivered.
-                        </div>
-                    </details>
-
-                    <details class="group bg-white border border-stone-200 overflow-hidden">
-                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
-                            <span data-i18n="faqQ2">How disruptive is the full-day audit?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA2">
-                            There is zero operational disruption. We require no assistance from your team on-site. We are invisible and experience the hotel exactly as a guest would.
-                        </div>
-                    </details>
-
-                    <details class="group bg-white border border-stone-200 overflow-hidden">
-                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
-                            <span data-i18n="faqQ3">Do you benchmark against brand or independent standards?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA3">
-                            We adapt to your specific Brand Standards (e.g., LQA, Forbes) or, if requested, apply our own 'Noble Standard'—an amalgamation of the finest British and international protocols.
-                        </div>
-                    </details>
-
-                    <details class="group bg-white border border-stone-200 overflow-hidden">
-                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
-                            <span data-i18n="faqQ4">Can findings be shared with ownership only?</span>
-                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
-                        </summary>
-                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA4">
-                            Yes. Findings are shared strictly with the authorized stakeholder (Owner, GM, or Asset Manager). We do not publish rankings, public reviews, or share data with third parties.
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 px-6 bg-white">
+        <section class="py-24 px-6 bg-white border-b border-stone-200">
             <div class="max-w-7xl mx-auto">
                 <div class="mb-16 border-l-4 border-gold-600 pl-6 flex flex-col md:flex-row justify-between items-end">
                     <div>
@@ -418,6 +221,206 @@
             </div>
         </section>
 
+        <section id="about" class="py-24 bg-white border-b border-stone-200">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-px h-16 bg-gold-500"></div>
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl text-navy-950 mb-8" data-i18n="aboutTitle">A Legacy of British Standards</h2>
+                <div class="prose prose-lg mx-auto text-navy-800/80">
+                    <p class="mb-6 leading-relaxed font-light" data-i18n="aboutText1">
+                        With roots in the rigorous etiquette of London's grand hotels, founder Brendon Rudolph established Noble Audits in Hungary, in 2001, to bring a higher caliber of evaluation to the Hungarian market. We do not simply check boxes; we uphold the traditions of impeccable service.
+                    </p>
+                    <p class="leading-relaxed font-light" data-i18n="aboutText2">
+                        Based in Budapest but operating with a British mindset, our team possesses the refined eye required to spot the smallest deviations in protocol. Whether serving royalty or rock stars, your staff must perform flawlessly. We ensure they do.
+                    </p>
+                </div>
+                <div class="mt-10 flex justify-center gap-4">
+                    <span class="font-serif text-4xl text-gold-500 italic opacity-50">B. Rudolph</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 bg-stone-50 border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-6">
+                
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-4xl text-navy-950 mb-4" data-i18n="servHeading">Core Audit Solutions</h2>
+                    <p class="text-navy-800/60 uppercase tracking-widest text-xs" data-i18n="servSub">Precision tailored to your operational needs and International Hotel Standards</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    
+                    <div class="relative bg-white border border-stone-200 p-10 shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-navy-900 to-navy-800 group-hover:from-gold-500 group-hover:to-gold-400 transition-all"></div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-navy-50 p-3 rounded-full text-navy-900 group-hover:bg-gold-50 group-hover:text-gold-600 transition-colors">
+                                <i data-lucide="zap" class="w-8 h-8"></i>
+                            </div>
+                            <span class="bg-navy-900 text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm" data-i18n="rushBadge">Most Popular</span>
+                        </div>
+                        <h3 class="font-serif text-3xl text-navy-950 mb-4" data-i18n="rushTitle">The Two-Hour Rush Audit</h3>
+                        <p class="text-navy-800/70 mb-8 leading-relaxed" data-i18n="rushDesc">
+                            A rapid, high-impact assessment designed for immediate feedback. Our auditor validates critical touchpoints—Arrival, Front Desk efficiency, Bar Service and 3-Room Category Assessment — within a concentrated window. Perfect for spot-checks during peak hours.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-navy-800">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat1">Immediate Report Option – Sit Down or Walk Through</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat2">Focus on First Impressions and Imperfections</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="rushFeat3">Cost-effective Snapshot</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="relative bg-navy-900 text-white border border-navy-800 p-10 shadow-2xl hover:-translate-y-1 transition-all">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gold-500"></div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="bg-white/10 p-3 rounded-full text-gold-400">
+                                <i data-lucide="clock" class="w-8 h-8"></i>
+                            </div>
+                            <span class="border border-gold-500 text-gold-400 text-[10px] font-bold px-3 py-1 uppercase tracking-widest rounded-sm" data-i18n="fullBadge">The Gold Standard</span>
+                        </div>
+                        <h3 class="font-serif text-3xl text-white mb-4" data-i18n="fullTitle">The Comprehensive Full-Day Audit</h3>
+                        <p class="text-stone-300 mb-8 leading-relaxed" data-i18n="fullDesc">
+                            The definitive deep-dive. An auditor immerses themselves for 24 hours, evaluating over 300 SOP criteria across Housekeeping, F&B, Concierge, and Spa. This is the forensic analysis required for 5-star accreditation.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-sm text-stone-200">
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat1">Full Guest Journey Mapping</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat2">Overnight Stay & Breakfast</span></li>
+                            <li class="flex items-center gap-3"><i data-lucide="check" class="w-4 h-4 text-gold-500"></i> <span data-i18n="fullFeat3">Detailed Strategic Report</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="bg-white border border-stone-200 p-8 md:p-12">
+                    <h4 class="font-serif text-2xl text-navy-950 mb-8 text-center" data-i18n="addonTitle">Bespoke Add-ons & Specifics</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="flex gap-4">
+                            <i data-lucide="wine" class="w-6 h-6 text-gold-600 shrink-0"></i>
+                            <div>
+                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add1Title">Sommelier Test</h5>
+                                <p class="text-sm text-navy-800/70" data-i18n="add1Desc">Testing wine knowledge and upselling skills in your fine dining venues.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i data-lucide="phone-call" class="w-6 h-6 text-gold-600 shrink-0"></i>
+                            <div>
+                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add2Title">The Impossible Request</h5>
+                                <p class="text-sm text-navy-800/70" data-i18n="add2Desc">Challenging your Concierge with difficult demands to test resourcefulness.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i data-lucide="moon" class="w-6 h-6 text-gold-600 shrink-0"></i>
+                            <div>
+                                <h5 class="font-bold text-navy-900 uppercase text-xs tracking-widest mb-2" data-i18n="add3Title">Late Night Arrival</h5>
+                                <p class="text-sm text-navy-800/70" data-i18n="add3Desc">Auditing the energy and standards of the night shift team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-stone-100 border-b border-stone-200">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="bg-white p-10 md:p-14 shadow-lg border-t-4 border-navy-900 relative">
+                    <i data-lucide="quote" class="absolute top-10 right-10 w-12 h-12 text-stone-100 fill-current"></i>
+                    <h3 class="font-serif text-2xl text-navy-950 mb-6" data-i18n="letterTitle">A Letter from the Founder</h3>
+                    <div class="prose prose-stone text-navy-800 font-light leading-relaxed">
+                        <p class="mb-4" data-i18n="letterP1">
+                            To our prospective partners,
+                        </p>
+                        <p class="mb-4" data-i18n="letterP2">
+                            True hospitality is not merely the presence of luxury; it is the absence of friction. For three decades, I have observed that the difference between a good hotel and a legend lies in the consistency of its details.
+                        </p>
+                        <p class="mb-6" data-i18n="letterP3">
+                            We do not seek faults for the sake of criticism. We seek the truth to empower your excellence. We bring the discipline of the old world to the demands of the new.
+                        </p>
+                        <p data-i18n="letterSign">
+                            Yours faithfully,
+                        </p>
+                        <div class="mt-4 font-serif text-xl text-navy-900 italic">Brendon Rudolph</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-b border-stone-200">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-10 bg-stone-50 border border-stone-200 p-8 rounded-sm">
+                    <div class="flex-shrink-0 bg-navy-900 text-white p-6 rounded-sm shadow-md">
+                        <i data-lucide="file-text" class="w-12 h-12"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="font-serif text-2xl text-navy-950 mb-3" data-i18n="sampleTitle">Sample Audit Report (Redacted)</h3>
+                        <p class="text-navy-800/70 mb-4 leading-relaxed" data-i18n="sampleDesc">
+                            For serious inquiries, we offer a viewing of a 6-page professional audit sample. This document (with property name fully redacted) demonstrates our rigorous scoring framework, detailed narrative observations, and actionable recommendations.
+                        </p>
+                        <div class="flex items-center gap-2 text-gold-600 font-bold text-xs uppercase tracking-widest">
+                            <i data-lucide="lock" class="w-3 h-3"></i>
+                            <span data-i18n="sampleStatus">Available upon request</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#contact" class="inline-block border border-navy-900 text-navy-900 px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-navy-900 hover:text-white transition-colors" data-i18n="sampleBtn">
+                            Request Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-stone-50 border-b border-stone-200">
+            <div class="max-w-3xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-serif text-3xl text-navy-950 mb-4" data-i18n="faqTitle">Executive FAQ</h2>
+                    <div class="h-px w-20 bg-gold-500 mx-auto"></div>
+                </div>
+                
+                <div class="space-y-4">
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ1">Will staff know they are being audited?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA1">
+                            Our auditors operate with complete discretion. We book, dine, and interact exactly as a high-net-worth guest would. Your team will not know they are being evaluated until the report is delivered.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ2">How disruptive is the full-day audit?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA2">
+                            There is zero operational disruption. We require no assistance from your team on-site. We are invisible and experience the hotel exactly as a guest would.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ3">Do you benchmark against brand or independent standards?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA3">
+                            We adapt to your specific Brand Standards (e.g., LQA, Forbes) or, if requested, apply our own "Noble Standard"—an amalgamation of the finest British and international protocols.
+                        </div>
+                    </details>
+
+                    <details class="group bg-white border border-stone-200 overflow-hidden">
+                        <summary class="flex justify-between items-center p-6 cursor-pointer text-navy-900 font-bold hover:bg-stone-50 transition-colors">
+                            <span data-i18n="faqQ4">Can findings be shared with ownership only?</span>
+                            <i data-lucide="chevron-down" class="w-5 h-5 text-gold-500 transition-transform group-open:rotate-180"></i>
+                        </summary>
+                        <div class="px-6 pb-6 text-navy-800/80 leading-relaxed font-light" data-i18n="faqA4">
+                            Yes. Findings are shared strictly with the authorized stakeholder (Owner, GM, or Asset Manager). We do not publish rankings, public reviews, or share data with third parties.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="bg-navy-950 text-stone-300 py-24 px-6 border-t-4 border-gold-600 relative overflow-hidden">
             <div class="absolute top-0 right-0 p-12 opacity-5">
                 <i data-lucide="anchor" class="w-96 h-96"></i>
@@ -455,6 +458,7 @@
             en: {
                 navAbout: 'Heritage',
                 navServices: 'Services',
+                navContact: 'Contact',
                 heroSubtitle: 'British Precision. Focused on Budapest.',
                 heroTitle: 'Uncompromising <br> <i class="font-serif text-gold-600">Audit Excellence.</i>',
                 heroDesc: "Noble Audits delivers the unvarnished truth about your guest experience. Led by Brendon Rudolph, we bring three decades of classic British scrutiny to modern hospitality in Hungary.",
@@ -529,6 +533,7 @@
             hu: {
                 navAbout: 'Örökség',
                 navServices: 'Szolgáltatások',
+                navContact: 'Kapcsolat',
                 heroSubtitle: 'Brit Precizitás. Budapesti Fókusz.',
                 heroTitle: 'Megalkuvást Nem Tűrő <br> <i class="font-serif text-gold-600">Audit Kiválóság.</i>',
                 heroDesc: "A Noble Audits a kendőzetlen igazságot tárja fel a vendégélményről. Brendon Rudolph vezetésével a három évtized klasszikus brit alaposságát ötvözzük a modern magyar vendéglátással.",
